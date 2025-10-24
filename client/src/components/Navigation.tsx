@@ -11,7 +11,7 @@ export default function Navigation() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b-4 border-black bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link href="/" className="hover-elevate rounded-md px-2 py-1">
           <h1 className="font-serif text-xl font-bold" data-testid="link-home">
