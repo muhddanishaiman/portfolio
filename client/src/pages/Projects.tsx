@@ -44,19 +44,13 @@ export default function Projects() {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="inline-flex flex-col items-center gap-4 rounded-lg border bg-card p-8">
-            <h3 className="font-serif text-2xl font-semibold" data-testid="text-more-projects-heading">
+          <div className="inline-block rounded-lg bg-primary/10 p-8">
+            <h3 className="mb-3 font-serif text-xl font-semibold" data-testid="text-more-projects-heading">
               Want to see more?
             </h3>
-            <p className="text-muted-foreground max-w-md" data-testid="text-more-projects-description">
+            <p className="text-muted-foreground max-w-2xl" data-testid="text-more-projects-description">
               Check out my GitHub profile for more projects, contributions, and open-source work.
             </p>
-            <Button variant="default" asChild data-testid="button-github-all-projects">
-              <a href="[YOUR_GITHUB_URL]" target="_blank" rel="noopener noreferrer">
-                <Github className="mr-2 h-4 w-4" />
-                View All on GitHub
-              </a>
-            </Button>
           </div>
         </div>
       </section>
