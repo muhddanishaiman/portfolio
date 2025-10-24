@@ -7,6 +7,18 @@ export default function About() {
     <div className="min-h-[calc(100vh-4rem)]">
       <section className="container mx-auto max-w-4xl px-6 py-24">
         <div className="space-y-6 text-center">
+          {/* PROFILE_PHOTO: Add your profile photo here */}
+          <div className="mx-auto mb-8 flex h-48 w-48 items-center justify-center overflow-hidden rounded-full border-4 border-[#8B7355] bg-[#FAF3E8]">
+            <img 
+              src="[YOUR_PROFILE_PHOTO_URL]" 
+              alt="Profile" 
+              className="h-full w-full object-cover"
+              data-testid="img-profile"
+            />
+            {/* If you don't have a photo yet, you can use a placeholder like:
+                src="https://via.placeholder.com/192"
+                or remove the img tag and add text here */}
+          </div>
           <h1 className="font-serif text-5xl font-bold leading-tight" data-testid="text-name">
             [YOUR_NAME]
           </h1>
