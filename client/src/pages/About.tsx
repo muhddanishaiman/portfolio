@@ -20,7 +20,7 @@ export default function About() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
-            <Button variant="outline" size="default" asChild data-testid="button-github-profile">
+            <Button variant="default" size="default" asChild data-testid="button-github-profile">
               <a href="[YOUR_GITHUB_URL]" target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-4 w-4" />
                 GitHub Profile
