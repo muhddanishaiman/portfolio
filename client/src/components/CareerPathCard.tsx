@@ -36,7 +36,7 @@ export default function CareerPathCard({
   } as const;
 
   return (
-    <Card className="flex h-full flex-col p-8 border-4 border-[#8B7355] bg-white">
+    <Card className="flex h-full flex-col p-8 border-4 border-[#8B7355] bg-[#FAF3E8]">
       <CardHeader className="space-y-4 px-0 pt-0">
         <div className="flex items-center justify-between gap-4">
           <div className="flex h-12 w-12 items-center justify-center rounded-md bg-primary/10 text-primary">

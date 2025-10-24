@@ -17,7 +17,7 @@ export default function ProjectCard({
   technologies,
 }: ProjectCardProps) {
   return (
-    <Card className="flex h-full flex-col hover-elevate transition-transform duration-200 border-4 border-[#8B7355] bg-white">
+    <Card className="flex h-full flex-col hover-elevate transition-transform duration-200 border-4 border-[#8B7355] bg-[#FAF3E8]">
       <CardHeader>
         <CardTitle className="font-serif text-xl" data-testid={`text-project-title-${title.toLowerCase().replace(/\s+/g, '-')}`}>
           {title}
