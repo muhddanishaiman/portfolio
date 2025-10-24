@@ -246,7 +246,7 @@ export default function Recommendations() {
       <section className="container mx-auto max-w-6xl px-6 py-16">
         <div className="mb-12 space-y-4">
           <h1 className="font-serif text-4xl font-bold" data-testid="text-page-title">
-            Computer Science Career Guide
+            CS Paths
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed" data-testid="text-page-description">
             Explore different career paths in computer science and technology. Each path includes curated

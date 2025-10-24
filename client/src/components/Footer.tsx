@@ -25,7 +25,7 @@ export default function Footer() {
                 Projects
               </Link>
               <Link href="/recommendations" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-recommendations">
-                CS Career Guide
+                CS Paths
               </Link>
             </nav>
           </div>

@@ -7,7 +7,7 @@ export default function Navigation() {
   const navItems = [
     { path: "/", label: "About" },
     { path: "/projects", label: "Projects" },
-    { path: "/recommendations", label: "CS Career Guide" },
+    { path: "/recommendations", label: "CS Paths" },
   ];
 
   return (
