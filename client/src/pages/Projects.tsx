@@ -8,21 +8,18 @@ export default function Projects() {
       title: "[PROJECT_1_TITLE]",
       description: "[PROJECT_1_DESCRIPTION]",
       githubUrl: "[PROJECT_1_GITHUB_URL]",
-      demoUrl: "[PROJECT_1_DEMO_URL]",
       technologies: ["[TECH_1]", "[TECH_2]", "[TECH_3]"],
     },
     {
       title: "[PROJECT_2_TITLE]",
       description: "[PROJECT_2_DESCRIPTION]",
       githubUrl: "[PROJECT_2_GITHUB_URL]",
-      demoUrl: "",
       technologies: ["[TECH_1]", "[TECH_2]"],
     },
     {
       title: "[PROJECT_3_TITLE]",
       description: "[PROJECT_3_DESCRIPTION]",
       githubUrl: "[PROJECT_3_GITHUB_URL]",
-      demoUrl: "[PROJECT_3_DEMO_URL]",
       technologies: ["[TECH_1]", "[TECH_2]", "[TECH_3]", "[TECH_4]"],
     },
   ];
