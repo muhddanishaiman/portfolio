@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="w-full border-t-4 border-black bg-background">
       <div className="container mx-auto max-w-6xl px-6 py-12">
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="flex justify-center gap-16 md:gap-24">
           <div>
             <h3 className="mb-4 font-serif text-lg font-semibold">Quick Links</h3>
             <nav className="flex flex-col gap-2">

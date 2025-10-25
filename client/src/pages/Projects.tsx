@@ -32,8 +32,7 @@ export default function Projects() {
             Projects
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl" data-testid="text-page-description">
-            A collection of projects I've built, ranging from web applications to open-source contributions.
-            Each project represents a learning journey and demonstrates different technical skills.
+            These are the projects I have done so far. I've been exploring all types of capstone to get a hands-on experience on what it feels like to code with different skillsets.
           </p>
         </div>
 
@@ -49,7 +48,7 @@ export default function Projects() {
               Want to see more?
             </h3>
             <p className="text-muted-foreground max-w-2xl" data-testid="text-more-projects-description">
-              Check out my GitHub profile for more projects, contributions, and open-source work.
+              Checkout my github repository for all the labs I have done. If you are looking for Penn State related assignments, contact me personally for more information.
             </p>
           </div>
         </div>
