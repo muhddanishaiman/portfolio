@@ -5,20 +5,20 @@ import { Github } from "lucide-react";
 export default function Projects() {
   const projects = [
     {
-      title: "[PROJECT_1_TITLE]",
-      description: "[PROJECT_1_DESCRIPTION]",
+      title: "Customer Accounts Microservice",
+      description: "Containerized a microservice and deployed it on Kubernetes/OpenShift",
       githubUrl: "[PROJECT_1_GITHUB_URL]",
       technologies: ["[TECH_1]", "[TECH_2]", "[TECH_3]"],
     },
     {
-      title: "[PROJECT_2_TITLE]",
-      description: "[PROJECT_2_DESCRIPTION]",
+      title: "Falcon 9 Landing Prediction",
+      description: "Trained machine learning models to predict the Falcon 9 landing",
       githubUrl: "[PROJECT_2_GITHUB_URL]",
       technologies: ["[TECH_1]", "[TECH_2]"],
     },
     {
-      title: "[PROJECT_3_TITLE]",
-      description: "[PROJECT_3_DESCRIPTION]",
+      title: "Currency Denomination Classification using Keras",
+      description: "Built CNN models to identify different European currency notes",
       githubUrl: "[PROJECT_3_GITHUB_URL]",
       technologies: ["[TECH_1]", "[TECH_2]", "[TECH_3]", "[TECH_4]"],
     },
