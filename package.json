@@ -102,5 +102,12 @@
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.8"
+  },
+  {
+  "homepage": "https://muhddanishaiman.github.io/portfolio",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   }
+}
 }
