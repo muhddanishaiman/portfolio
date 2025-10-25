@@ -52,9 +52,6 @@ export default function About() {
               <p data-testid="text-background-paragraph-1">
                 [YOUR_BACKGROUND_PARAGRAPH_1]
               </p>
-              <p data-testid="text-background-paragraph-2">
-                [YOUR_BACKGROUND_PARAGRAPH_2]
-              </p>
             </div>
           </div>
 
