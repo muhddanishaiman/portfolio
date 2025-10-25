@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <h3 className="mb-2 font-serif text-lg font-semibold">About</h3>
             <p className="text-sm text-muted-foreground">
-              [YOUR_TAGLINE]
+              Computer Science student at Penn State University
             </p>
           </div>
           
@@ -34,7 +34,7 @@ export default function Footer() {
             <h3 className="mb-2 font-serif text-lg font-semibold">Connect</h3>
             <div className="flex gap-3">
               <a
-                href="[YOUR_GITHUB_URL]"
+                href="https://github.com/muhddanishaiman"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover-elevate active-elevate-2 rounded-md p-2"
@@ -44,7 +44,7 @@ export default function Footer() {
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="[YOUR_LINKEDIN_URL]"
+                href="https://www.linkedin.com/in/danish-ezwan/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover-elevate active-elevate-2 rounded-md p-2"
@@ -54,7 +54,7 @@ export default function Footer() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="mailto:[YOUR_EMAIL]"
+                href="mailto:muhdnish2572@gmail.com"
                 className="hover-elevate active-elevate-2 rounded-md p-2"
                 data-testid="link-email"
                 aria-label="Email"
@@ -67,7 +67,7 @@ export default function Footer() {
         
         <div className="mt-8 border-t pt-6 text-center">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} [YOUR_NAME]. All rights reserved.
+            © {currentYear} Muhammad Danish Aiman Bin Mohd Ezwan. All rights reserved.
           </p>
         </div>
       </div>
