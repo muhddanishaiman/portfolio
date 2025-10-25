@@ -7,20 +7,20 @@ export default function Projects() {
     {
       title: "Customer Accounts Microservice",
       description: "Containerized a microservice and deployed it on Kubernetes/OpenShift",
-      githubUrl: "[PROJECT_1_GITHUB_URL]",
-      technologies: ["[TECH_1]", "[TECH_2]", "[TECH_3]"],
+      githubUrl: "https://github.com/muhddanishaiman/devops-capstone-project",
+      technologies: ["Kubernetes", "Tekton CI/CD", "Agile", "PostgreSQL", "Flask"],
     },
     {
       title: "Falcon 9 Landing Prediction",
       description: "Trained machine learning models to predict the Falcon 9 landing",
-      githubUrl: "[PROJECT_2_GITHUB_URL]",
-      technologies: ["[TECH_1]", "[TECH_2]"],
+      githubUrl: "https://github.com/muhddanishaiman/ds-ml-capstone",
+      technologies: ["Python", "Seaborn", "NumPy", "Pandas"],
     },
     {
       title: "Currency Denomination Classification using Keras",
       description: "Built CNN models to identify different European currency notes",
-      githubUrl: "[PROJECT_3_GITHUB_URL]",
-      technologies: ["[TECH_1]", "[TECH_2]", "[TECH_3]", "[TECH_4]"],
+      githubUrl: "https://github.com/muhddanishaiman/applied-deep-learning-capstone",
+      technologies: ["Python", "Keras", "Matplotlib"],
     },
   ];
 
