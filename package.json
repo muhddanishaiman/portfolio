@@ -1,12 +1,15 @@
 {
   "name": "rest-express",
+  "homepage": "https://muhddanishaiman.github.io/portfolio",
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "build": "react-scripts build"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -101,6 +104,5 @@
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.8"
-  },
-  "homepage": "https://muhddanishaiman.github.io/portfolio"
+  }
 }
