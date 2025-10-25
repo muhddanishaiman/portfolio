@@ -32,7 +32,7 @@ export default function Projects() {
             Projects
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl" data-testid="text-page-description">
-            These are the projects I have done so far. I have been exploring all types of capstone projects to get a hands-on experience on what it feels like to code with different skillsets.
+            These are the projects I have done so far. I have been exploring different types of capstone projects to get a hands-on experience on what it feels like to code with different skillsets.
           </p>
         </div>
 
