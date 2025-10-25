@@ -48,7 +48,7 @@ export default function Projects() {
               Want to see more?
             </h3>
             <p className="text-muted-foreground max-w-2xl" data-testid="text-more-projects-description">
-              Checkout my github repository for all the labs I have done. If you are looking for Penn State related assignments, contact me personally for more information.
+              Checkout my GitHub repository for all the labs I have done. If you are looking for Penn State related assignments, contact me personally for more information.
             </p>
           </div>
         </div>
