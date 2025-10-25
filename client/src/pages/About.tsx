@@ -20,7 +20,7 @@ export default function About() {
                 or remove the img tag and add text here */}
           </div>
           <h1 className="font-serif text-5xl font-bold leading-tight" data-testid="text-name">
-            [YOUR_NAME]
+            Muhammad Danish Aiman Bin Mohd Ezwan
           </h1>
           <p className="text-xl text-muted-foreground" data-testid="text-tagline">
             [YOUR_TAGLINE]
