@@ -15,7 +15,7 @@ export default function Navigation() {
       <nav className="container mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <Link href="/" className="hover-elevate rounded-md px-2 py-1">
           <h1 className="font-serif text-xl font-bold" data-testid="link-home">
-            [YOUR_NAME]
+            Danish Ezwan
           </h1>
         </Link>
         <div className="flex items-center gap-2">

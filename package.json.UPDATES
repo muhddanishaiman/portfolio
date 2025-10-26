@@ -1,0 +1,6 @@
+{
+  "name": "rest-express",
+  "homepage": "https://muhddanishaiman.github.io/portfolio/",
+  "version": "1.0.0",
+  "note": "The 'homepage' field is already correct in your existing package.json file - it should remain as /portfolio/"
+}

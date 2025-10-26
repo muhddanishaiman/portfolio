@@ -7,16 +7,9 @@ export default function Footer() {
   return (
     <footer className="w-full border-t-4 border-black bg-background">
       <div className="container mx-auto max-w-6xl px-6 py-12">
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="flex justify-center gap-16 md:gap-24">
           <div>
-            <h3 className="mb-2 font-serif text-lg font-semibold">About</h3>
-            <p className="text-sm text-muted-foreground">
-              [YOUR_TAGLINE]
-            </p>
-          </div>
-          
-          <div>
-            <h3 className="mb-2 font-serif text-lg font-semibold">Quick Links</h3>
+            <h3 className="mb-4 font-serif text-lg font-semibold">Quick Links</h3>
             <nav className="flex flex-col gap-2">
               <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-about">
                 About
@@ -31,10 +24,10 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="mb-2 font-serif text-lg font-semibold">Connect</h3>
+            <h3 className="mb-4 font-serif text-lg font-semibold">Connect</h3>
             <div className="flex gap-3">
               <a
-                href="[YOUR_GITHUB_URL]"
+                href="https://github.com/muhddanishaiman"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover-elevate active-elevate-2 rounded-md p-2"
@@ -44,7 +37,7 @@ export default function Footer() {
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="[YOUR_LINKEDIN_URL]"
+                href="https://www.linkedin.com/in/danish-ezwan/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover-elevate active-elevate-2 rounded-md p-2"
@@ -54,7 +47,7 @@ export default function Footer() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="mailto:[YOUR_EMAIL]"
+                href="mailto:muhdnish2572@gmail.com"
                 className="hover-elevate active-elevate-2 rounded-md p-2"
                 data-testid="link-email"
                 aria-label="Email"
@@ -67,7 +60,7 @@ export default function Footer() {
         
         <div className="mt-8 border-t pt-6 text-center">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} [YOUR_NAME]. All rights reserved.
+            © {currentYear} Muhammad Danish Aiman Bin Mohd Ezwan. All rights reserved.
           </p>
         </div>
       </div>

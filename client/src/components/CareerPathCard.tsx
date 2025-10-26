@@ -107,13 +107,6 @@ export default function CareerPathCard({
           </div>
         </div>
       </CardContent>
-
-      <CardFooter className="px-0 pb-0">
-        <Button variant="outline" className="w-full" data-testid={`button-explore-${title.toLowerCase().replace(/\s+/g, '-')}`}>
-          <BookOpen className="mr-2 h-4 w-4" />
-          Explore {title}
-        </Button>
-      </CardFooter>
     </Card>
   );
 }
