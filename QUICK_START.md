@@ -2,7 +2,7 @@
 
 ## TL;DR - What You Need To Do
 
-You're currently on the `gh-pages` branch. Follow these steps to prepare your portfolio for automated GitHub Pages deployment:
+You're currently on the `gh-pages` branch. Your existing configuration is already correct for your repository! Follow these steps to set up automated deployment:
 
 ### Step 1: Switch to Main Branch
 ```bash
@@ -23,28 +23,20 @@ git checkout main
    git checkout gh-pages -- .nojekyll
    ```
 
-### Step 3: Update Existing Files on Main Branch
+### Step 3: Verify Existing Files on Main Branch
 
-#### Update `vite.config.ts` (line 7):
-**Change this:**
+Your configuration is already correct! Just verify:
+
+#### Check `vite.config.ts` (line 7):
+**Should be:**
 ```typescript
-base: '/portfolio/',
+base: '/portfolio/',  // ✅ Already correct!
 ```
 
-**To this:**
-```typescript
-base: '/portfolio-app/',
-```
-
-#### Update `package.json` (homepage field):
-**Change this:**
+#### Check `package.json` (homepage field):
+**Should be:**
 ```json
-"homepage": "https://muhddanishaiman.github.io/portfolio/",
-```
-
-**To this:**
-```json
-"homepage": "https://muhddanishaiman.github.io/portfolio-app/",
+"homepage": "https://muhddanishaiman.github.io/portfolio/",  // ✅ Already correct!
 ```
 
 ### Step 4: Move .nojekyll to client/public/
@@ -54,7 +46,7 @@ mv .nojekyll client/public/.nojekyll
 
 ### Step 5: Configure GitHub Repository
 
-1. Go to: https://github.com/muhddanishaiman/portfolio-app/settings/pages
+1. Go to: https://github.com/muhddanishaiman/portfolio/settings/pages
 2. Under "Build and deployment":
    - **Source:** Select "GitHub Actions"
 3. Save
@@ -69,9 +61,9 @@ git push origin main
 
 ### Step 7: Watch It Deploy! 🚀
 
-1. Go to: https://github.com/muhddanishaiman/portfolio-app/actions
+1. Go to: https://github.com/muhddanishaiman/portfolio/actions
 2. Watch the deployment workflow run
-3. When complete, visit: **https://muhddanishaiman.github.io/portfolio-app/**
+3. When complete, visit: **https://muhddanishaiman.github.io/portfolio/**
 
 ---
 

@@ -1,6 +1,6 @@
 {
   "name": "rest-express",
-  "homepage": "https://muhddanishaiman.github.io/portfolio-app/",
+  "homepage": "https://muhddanishaiman.github.io/portfolio/",
   "version": "1.0.0",
-  "note": "Only the 'homepage' field needs to be updated in your existing package.json file. Change from /portfolio/ to /portfolio-app/"
+  "note": "The 'homepage' field is already correct in your existing package.json file - it should remain as /portfolio/"
 }

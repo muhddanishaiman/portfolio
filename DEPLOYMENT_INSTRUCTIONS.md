@@ -2,10 +2,10 @@
 
 ## Overview
 Your portfolio website is ready to be deployed to GitHub Pages at:
-**https://muhddanishaiman.github.io/portfolio-app/**
+**https://muhddanishaiman.github.io/portfolio/**
 
 ## Current Setup
-- Repository: https://github.com/muhddanishaiman/portfolio-app
+- Repository: https://github.com/muhddanishaiman/portfolio
 - Source code branch: `main`
 - Deployment branch: `gh-pages`
 
@@ -19,22 +19,22 @@ git checkout main
 
 ### 2. Update Configuration Files
 
-#### a. Update `vite.config.ts`
-Change the base path from `/portfolio/` to `/portfolio-app/`:
+#### a. Verify `vite.config.ts`
+The base path should already be correct as `/portfolio/`:
 
 ```typescript
 export default defineConfig({
-  base: '/portfolio-app/',  // Changed from '/portfolio/'
+  base: '/portfolio/',  // Should match repository name
   // ... rest of config
 });
 ```
 
-#### b. Update `package.json`
-Change the homepage URL:
+#### b. Verify `package.json`
+The homepage URL should already be correct:
 
 ```json
 {
-  "homepage": "https://muhddanishaiman.github.io/portfolio-app/",
+  "homepage": "https://muhddanishaiman.github.io/portfolio/",
   // ... rest of package.json
 }
 ```
@@ -110,7 +110,7 @@ This prevents GitHub Pages from processing your files with Jekyll.
 
 ### 5. Configure GitHub Pages Settings
 
-1. Go to your repository on GitHub: https://github.com/muhddanishaiman/portfolio-app
+1. Go to your repository on GitHub: https://github.com/muhddanishaiman/portfolio
 2. Click on **Settings** → **Pages**
 3. Under "Build and deployment":
    - Source: Select **GitHub Actions**
@@ -129,7 +129,7 @@ git push origin main
 1. Go to the **Actions** tab in your GitHub repository
 2. Watch the "Deploy to GitHub Pages" workflow run
 3. Once complete (green checkmark), your site will be live at:
-   **https://muhddanishaiman.github.io/portfolio-app/**
+   **https://muhddanishaiman.github.io/portfolio/**
 
 ## Alternative: Manual Deployment
 
@@ -149,7 +149,7 @@ This will build and push to the `gh-pages` branch automatically.
 - Check that GitHub Pages is configured to use "GitHub Actions" as source
 
 ### Issue: Broken CSS/JS Links
-- Verify the base path is `/portfolio-app/` (with trailing slash)
+- Verify the base path is `/portfolio/` (with trailing slash)
 - Clear browser cache and try again
 
 ### Issue: Build Fails
