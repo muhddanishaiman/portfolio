@@ -328,8 +328,9 @@ export default function Recommendations() {
             CS Paths
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed" data-testid="text-page-description">
-            Different career paths in computer science and technology. Each path includes curated
-            EdX courses to help you get started and understand what it's like to work in that field.
+            Not sure where to go in computer science? Here are some paths you can consider that I am familiar with. 
+            I added some links to courses that I think can help you get familiar of what each path has to offer. 
+            Note that this is just from one source (edX), there are plenty of other places to search!
           </p>
         </div>
 
