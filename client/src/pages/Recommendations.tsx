@@ -324,10 +324,10 @@ export default function Recommendations() {
     <div className="min-h-[calc(100vh-4rem)]">
       <section className="container mx-auto max-w-6xl px-6 py-16">
         <div className="mb-12 space-y-4">
-          <h1 className="font-serif text-4xl font-bold" data-testid="text-page-title">
+          <h1 className="font-serif text-5xl font-bold" data-testid="text-page-title">
             CS Paths
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed" data-testid="text-page-description">
+          <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed" data-testid="text-page-description">
             Different career paths in computer science and technology. Each path includes curated
             EdX courses to help you get started and understand what it's like to work in that field.
           </p>
@@ -341,7 +341,7 @@ export default function Recommendations() {
 
         <div className="mt-16 space-y-8">
           <div className="rounded-lg border bg-card p-8">
-            <h2 className="mb-4 font-serif text-2xl font-semibold" data-testid="text-additional-resources-heading">
+            <h2 className="mb-4 font-serif text-3xl font-semibold" data-testid="text-additional-resources-heading">
               Additional Resources
             </h2>
             <div className="space-y-3">
@@ -353,8 +353,8 @@ export default function Recommendations() {
                 data-testid="link-resource-edx"
               >
                 <div>
-                  <p className="font-medium">Browse All CS Courses on edX</p>
-                  <p className="text-sm text-muted-foreground">Explore hundreds of courses from top universities</p>
+                  <p className="font-medium text-lg">Browse All CS Courses on edX</p>
+                  <p className="text-base text-muted-foreground">Explore hundreds of courses from top universities</p>
                 </div>
                 <ExternalLink className="h-5 w-5 text-muted-foreground" />
               </a>
@@ -366,8 +366,8 @@ export default function Recommendations() {
                 data-testid="link-resource-ossu"
               >
                 <div>
-                  <p className="font-medium">Open Source CS Curriculum</p>
-                  <p className="text-sm text-muted-foreground">Free self-taught education in Computer Science</p>
+                  <p className="font-medium text-lg">Open Source CS Curriculum</p>
+                  <p className="text-base text-muted-foreground">Free self-taught education in Computer Science</p>
                 </div>
                 <ExternalLink className="h-5 w-5 text-muted-foreground" />
               </a>
@@ -379,8 +379,8 @@ export default function Recommendations() {
                 data-testid="link-resource-roadmap"
               >
                 <div>
-                  <p className="font-medium">Developer Roadmaps</p>
-                  <p className="text-sm text-muted-foreground">Step-by-step guides for different tech career paths</p>
+                  <p className="font-medium text-lg">Developer Roadmaps</p>
+                  <p className="text-base text-muted-foreground">Step-by-step guides for different tech career paths</p>
                 </div>
                 <ExternalLink className="h-5 w-5 text-muted-foreground" />
               </a>
@@ -389,10 +389,10 @@ export default function Recommendations() {
 
           <div className="text-center">
             <div className="inline-block rounded-lg bg-primary/10 p-8">
-              <h3 className="mb-3 font-serif text-xl font-semibold" data-testid="text-closing-message">
+              <h3 className="mb-3 font-serif text-2xl font-semibold" data-testid="text-closing-message">
                 Have a feel of each path and see what you are comfortable or interested in
               </h3>
-              <p className="text-muted-foreground max-w-2xl" data-testid="text-closing-description">
+              <p className="text-lg text-muted-foreground max-w-2xl" data-testid="text-closing-description">
                 There are plenty of other paths out there such as quantum computing, full stack development and UI/UX, so explore everything that computer science has to offer and see what excites you the most!
               </p>
             </div>
