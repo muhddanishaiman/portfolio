@@ -1,25 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { Github, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
+import profilePhoto from "@assets/IMG_5654_1761439183269.jpeg";
 
 export default function About() {
   return (
     <div className="min-h-[calc(100vh-4rem)]">
       <section className="container mx-auto max-w-4xl px-6 py-24">
         <div className="space-y-6 text-center">
-          {/* PROFILE_PHOTO: Replace with your LinkedIn profile photo URL */}
           <div className="mx-auto mb-8 flex h-48 w-48 items-center justify-center overflow-hidden rounded-full border-4 border-[#8B7355] bg-[#FAF3E8]">
             <img 
-              src="https://via.placeholder.com/192/8B7355/FAF3E8?text=MD" 
+              src={profilePhoto} 
               alt="Muhammad Danish Aiman Bin Mohd Ezwan" 
               className="h-full w-full object-cover"
               data-testid="img-profile"
             />
-            {/* To use your LinkedIn profile photo:
-                1. Go to your LinkedIn profile
-                2. Right-click on your profile photo
-                3. Select "Copy image address"
-                4. Replace the src URL above with your LinkedIn photo URL */}
           </div>
           <h1 className="font-serif text-5xl font-bold leading-tight" data-testid="text-name">
             Muhammad Danish Aiman Bin Mohd Ezwan
