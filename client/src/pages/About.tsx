@@ -6,7 +6,7 @@ import profilePhoto from "@assets/IMG_5654_1761439183269.jpeg";
 export default function About() {
   return (
     <div className="min-h-[calc(100vh-4rem)]">
-      <section className="container mx-auto max-w-4xl px-6 py-24">
+      <section className="container mx-auto max-w-4xl px-6 pt-24 pb-8">
         <div className="space-y-6 text-center">
           <div className="mx-auto mb-8 flex h-48 w-48 items-center justify-center overflow-hidden rounded-full border-4 border-[#8B7355] bg-[#FAF3E8]">
             <img 
@@ -36,7 +36,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="container mx-auto max-w-prose px-6 py-16">
+      <section className="container mx-auto max-w-prose px-6 py-8">
         <div className="space-y-8">
           <div>
             <h2 className="mb-4 font-serif text-4xl font-semibold" data-testid="text-background-heading">
