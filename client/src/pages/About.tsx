@@ -39,11 +39,11 @@ export default function About() {
       <section className="container mx-auto max-w-prose px-6 py-16">
         <div className="space-y-8">
           <div>
-            <h2 className="mb-4 font-serif text-3xl font-semibold" data-testid="text-background-heading">
+            <h2 className="mb-4 font-serif text-4xl font-semibold" data-testid="text-background-heading">
               Background
             </h2>
             <div className="space-y-4 leading-relaxed text-muted-foreground">
-              <p data-testid="text-background-paragraph-1">
+              <p className="text-xl" data-testid="text-background-paragraph-1">
                 Hello there! I'm from Malaysia and currently a student at Penn State University. My major is Computer Science and I'm hoping to do a minor in Mathematics and Cybersecurity as well.
               </p>
             </div>
@@ -52,11 +52,11 @@ export default function About() {
           <hr className="border-border" />
 
           <div>
-            <h2 className="mb-4 font-serif text-3xl font-semibold" data-testid="text-interests-heading">
+            <h2 className="mb-4 font-serif text-4xl font-semibold" data-testid="text-interests-heading">
               Interests
             </h2>
             <div className="space-y-4 leading-relaxed text-muted-foreground">
-              <p data-testid="text-interests-description">
+              <p className="text-xl" data-testid="text-interests-description">
                 I'm currently interested in doing more data science, machine learning , software engineering, and cloud computing related projects. I am happy to aid in research to apply my skills and bring an impact to the world!
               </p>
             </div>
