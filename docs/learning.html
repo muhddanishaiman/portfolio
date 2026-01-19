@@ -60,82 +60,100 @@
       <!-- Page Header -->
       <div class="page-header">
         <h1 class="font-display text-glow">LEARNING PATH</h1>
-        <p>A visual journey through my education and career. The timeline below shows how different learning experiences overlapped and built upon each other. Branching paths indicate parallel learning activities.</p>
+        <p>A visual journey through my education and career. The flowchart below shows how different learning experiences connect and build upon each other.</p>
       </div>
       
-      <!-- Learning Timeline -->
-      <!-- TO MODIFY: Add, remove, or edit timeline nodes below -->
-      <!-- Use "timeline-parallel" class wrapper for items that happened simultaneously -->
-      <div class="learning-timeline">
+      <!-- Learning Flowchart -->
+      <div class="flowchart">
         
-        <!-- Group 1: Starting Point (Parallel Activities) -->
-        <div class="timeline-group animate-on-scroll">
-          <div class="timeline-group-label">Starting Point — Sep 2018</div>
-          
-          <!-- These two items happened at the same time -->
-          <div class="timeline-parallel">
-            <article class="timeline-node">
-              <span class="timeline-type">University</span>
-              <h3 class="timeline-title">Started Computer Science Degree</h3>
-              <span class="timeline-date">Sep 2018</span>
-              <p class="timeline-description">Enrolled in University to study fundamentals of CS. Learned data structures, algorithms, and software engineering principles.</p>
-            </article>
-            
-            <article class="timeline-node">
-              <span class="timeline-type">Self-Study</span>
-              <h3 class="timeline-title">Web Development Bootcamp</h3>
-              <span class="timeline-date">Sep 2018</span>
-              <p class="timeline-description">Self-taught HTML, CSS, and JS on the weekends. Built first personal projects and learned modern frameworks.</p>
-            </article>
+        <!-- Row 1: Starting Point -->
+        <div class="flowchart-row">
+          <div class="flowchart-node node-oval">
+            <span class="node-label">Started CS Degree</span>
+            <span class="node-date">Sep 2018</span>
           </div>
         </div>
         
-        <!-- Group 2: First Professional Experience -->
-        <div class="timeline-group animate-on-scroll">
-          <div class="timeline-group-label">Professional Experience</div>
-          
-          <div class="timeline-items">
-            <article class="timeline-node">
-              <span class="timeline-type">Work</span>
-              <h3 class="timeline-title">First Internship</h3>
-              <span class="timeline-date">Summer 2020</span>
-              <p class="timeline-description">Junior Web Dev intern at a local startup. Gained real-world experience with team collaboration, code reviews, and agile development.</p>
-            </article>
+        <!-- Arrow Down -->
+        <div class="flowchart-arrow arrow-down">
+          <div class="arrow-line"></div>
+          <div class="arrow-head"></div>
+        </div>
+        
+        <!-- Row 2: Decision/Process -->
+        <div class="flowchart-row">
+          <div class="flowchart-node node-parallelogram">
+            <span class="node-label">Learning Fundamentals</span>
+            <span class="node-date">2018-2019</span>
           </div>
         </div>
         
-        <!-- Group 3: Graduation -->
-        <div class="timeline-group animate-on-scroll">
-          <div class="timeline-group-label">Milestone Achievement</div>
-          
-          <div class="timeline-items">
-            <article class="timeline-node">
-              <span class="timeline-type">University</span>
-              <h3 class="timeline-title">Graduated</h3>
-              <span class="timeline-date">May 2022</span>
-              <p class="timeline-description">Bachelor of Science in Computer Science. Completed senior capstone project on distributed systems.</p>
-            </article>
+        <!-- Arrow Down with Branch -->
+        <div class="flowchart-arrow arrow-down">
+          <div class="arrow-line"></div>
+          <div class="arrow-head"></div>
+        </div>
+        
+        <!-- Row 3: Diamond Decision -->
+        <div class="flowchart-row">
+          <div class="flowchart-node node-diamond">
+            <span class="node-label">Choose Path?</span>
           </div>
         </div>
         
-        <!-- Group 4: Current (Add your current activities) -->
-        <div class="timeline-group animate-on-scroll">
-          <div class="timeline-group-label">Current Focus</div>
-          
-          <div class="timeline-parallel">
-            <article class="timeline-node">
-              <span class="timeline-type">Education</span>
-              <h3 class="timeline-title">Undergraduate at Penn State</h3>
-              <span class="timeline-date">Present</span>
-              <p class="timeline-description">Continuing education and exploring new areas of computer science while building practical projects.</p>
-            </article>
-            
-            <article class="timeline-node">
-              <span class="timeline-type">Project</span>
-              <h3 class="timeline-title">Personal Projects</h3>
-              <span class="timeline-date">Present</span>
-              <p class="timeline-description">Building portfolio projects, contributing to open source, and learning new technologies.</p>
-            </article>
+        <!-- Branch Arrows -->
+        <div class="flowchart-branch">
+          <div class="branch-left">
+            <span class="branch-label">Theory</span>
+            <div class="branch-line-left"></div>
+            <div class="branch-arrow-left"></div>
+          </div>
+          <div class="branch-right">
+            <span class="branch-label">Practice</span>
+            <div class="branch-line-right"></div>
+            <div class="branch-arrow-right"></div>
+          </div>
+        </div>
+        
+        <!-- Row 4: Parallel Nodes -->
+        <div class="flowchart-row flowchart-row-parallel">
+          <div class="flowchart-node node-rect">
+            <span class="node-label">Algorithms & Data Structures</span>
+            <span class="node-date">2019-2020</span>
+          </div>
+          <div class="flowchart-node node-rect">
+            <span class="node-label">Web Dev Projects</span>
+            <span class="node-date">2019-2020</span>
+          </div>
+        </div>
+        
+        <!-- Merge Arrows -->
+        <div class="flowchart-merge">
+          <div class="merge-line-left"></div>
+          <div class="merge-line-right"></div>
+          <div class="merge-line-down"></div>
+          <div class="merge-arrow"></div>
+        </div>
+        
+        <!-- Row 5: Internship -->
+        <div class="flowchart-row">
+          <div class="flowchart-node node-rect">
+            <span class="node-label">First Internship</span>
+            <span class="node-date">Summer 2020</span>
+          </div>
+        </div>
+        
+        <!-- Arrow Down -->
+        <div class="flowchart-arrow arrow-down">
+          <div class="arrow-line"></div>
+          <div class="arrow-head"></div>
+        </div>
+        
+        <!-- Row 6: Current -->
+        <div class="flowchart-row">
+          <div class="flowchart-node node-oval">
+            <span class="node-label">Penn State University</span>
+            <span class="node-date">Present</span>
           </div>
         </div>
         
