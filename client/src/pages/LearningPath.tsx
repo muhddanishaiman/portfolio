@@ -84,7 +84,7 @@ function FlowchartNode({ node, index, isLast }: { node: any; index: number; isLa
       <div 
         className={`
           bg-primary/15 border-2 border-primary 
-          ${isDiamond ? 'w-32 h-32 flex items-center justify-center' : 'px-6 py-4 min-w-[200px] max-w-[280px]'}
+          ${isDiamond ? 'w-32 h-32 flex items-center justify-center' : 'px-8 py-4 min-w-[320px] max-w-[500px]'}
           ${shapeClass}
           text-center transition-all hover:bg-primary/25 hover:-translate-y-1
         `}

@@ -751,11 +751,11 @@ h1, h2, h3 {
 .flowchart-node {
   background: hsl(var(--primary) / 0.15);
   border: 2px solid hsl(var(--primary));
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
   text-align: center;
   transition: all var(--transition-fast);
-  min-width: 180px;
-  max-width: 220px;
+  min-width: 320px;
+  max-width: 500px;
 }
 
 .flowchart-node:hover {
