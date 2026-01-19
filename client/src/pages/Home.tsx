@@ -1,17 +1,7 @@
-import { useProfile, useUpdateProfile } from "@/hooks/use-profile";
+import { useProfile } from "@/hooks/use-profile";
 import { RetroCard } from "@/components/RetroCard";
-import { Github, Linkedin, Twitter, Globe, PenTool, Loader2 } from "lucide-react";
+import { Github, Linkedin, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { insertProfileSchema, type InsertProfile } from "@shared/schema";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 
 export default function Home() {
   const { data: profile, isLoading } = useProfile();
@@ -26,12 +16,11 @@ export default function Home() {
 
   // Fallback data if no profile exists yet
   const displayProfile = profile || {
-    name: "New Developer",
-    bio: "Welcome to your retro portfolio. Click edit to set up your profile!",
+    name: "Danish Ezwan",
+    bio: "Welcome to my retro portfolio.",
     imageUrl: null,
-    githubUrl: "",
-    linkedinUrl: "",
-    twitterUrl: ""
+    githubUrl: "https://github.com/muhddanishaiman",
+    linkedinUrl: "https://www.linkedin.com/in/danish-ezwan/"
   };
 
   return (
@@ -87,10 +76,9 @@ export default function Home() {
                   {displayProfile.name}
                 </h2>
                 <div className="font-mono text-sm text-primary/70 mt-1">
-                  FULL STACK DEVELOPER
+                  UNDERGRADUATE AT PENN STATE UNIVERSITY
                 </div>
               </div>
-              <EditProfileDialog profile={displayProfile} />
             </div>
 
             <div className="font-serif text-lg leading-relaxed text-foreground/90">
@@ -110,34 +98,12 @@ export default function Home() {
                 {displayProfile.linkedinUrl && (
                   <SocialLink href={displayProfile.linkedinUrl} icon={Linkedin} label="LinkedIn" />
                 )}
-                {displayProfile.twitterUrl && (
-                  <SocialLink href={displayProfile.twitterUrl} icon={Twitter} label="Twitter" />
-                )}
-                {/* Example of how other links might look */}
-                {!displayProfile.githubUrl && !displayProfile.linkedinUrl && (
-                   <span className="text-muted-foreground italic text-sm">No links configured.</span>
-                )}
               </div>
             </div>
           </div>
         </div>
       </RetroCard>
       
-      {/* Decorative footer stats */}
-      <div className="grid grid-cols-3 gap-4 font-mono text-xs text-center opacity-60">
-        <div className="border border-border p-2">
-          <div className="font-bold text-primary">UPTIME</div>
-          <div>99.9%</div>
-        </div>
-        <div className="border border-border p-2">
-          <div className="font-bold text-primary">LOCATION</div>
-          <div>Remote</div>
-        </div>
-        <div className="border border-border p-2">
-          <div className="font-bold text-primary">STATUS</div>
-          <div>Available</div>
-        </div>
-      </div>
     </div>
   );
 }
@@ -150,135 +116,9 @@ function SocialLink({ href, icon: Icon, label }: { href: string; icon: any; labe
       rel="noopener noreferrer"
       className="p-3 border-2 border-border hover:border-primary hover:text-primary hover:-translate-y-1 transition-all duration-200 bg-background group"
       aria-label={label}
+      data-testid={`link-${label.toLowerCase()}`}
     >
       <Icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
     </a>
-  );
-}
-
-function EditProfileDialog({ profile }: { profile: any }) {
-  const [open, setOpen] = useState(false);
-  const { toast } = useToast();
-  const updateMutation = useUpdateProfile();
-  
-  const form = useForm<InsertProfile>({
-    resolver: zodResolver(insertProfileSchema),
-    defaultValues: {
-      name: profile.name,
-      bio: profile.bio,
-      imageUrl: profile.imageUrl || "",
-      linkedinUrl: profile.linkedinUrl || "",
-      githubUrl: profile.githubUrl || "",
-      twitterUrl: profile.twitterUrl || "",
-    }
-  });
-
-  const onSubmit = (data: InsertProfile) => {
-    updateMutation.mutate(data, {
-      onSuccess: () => {
-        toast({ title: "Success", description: "Profile updated successfully" });
-        setOpen(false);
-      },
-      onError: () => {
-        toast({ title: "Error", description: "Failed to update profile", variant: "destructive" });
-      }
-    });
-  };
-
-  return (
-    <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        <Button variant="outline" size="icon" className="h-8 w-8">
-          <PenTool className="h-4 w-4" />
-        </Button>
-      </DialogTrigger>
-      <DialogContent className="max-w-md font-mono border-4 border-double border-primary/40 bg-background">
-        <DialogHeader>
-          <DialogTitle className="font-display text-xl text-primary">Edit Profile Card</DialogTitle>
-        </DialogHeader>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 mt-4">
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Identity Name</FormLabel>
-                  <FormControl>
-                    <Input {...field} className="font-serif" />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            
-            <FormField
-              control={form.control}
-              name="imageUrl"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Image URL (Optional)</FormLabel>
-                  <FormControl>
-                    <Input {...field} value={field.value || ""} placeholder="https://..." />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="bio"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Bio Data</FormLabel>
-                  <FormControl>
-                    <Textarea {...field} className="font-serif min-h-[100px]" />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <FormField
-                control={form.control}
-                name="githubUrl"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>GitHub</FormLabel>
-                    <FormControl>
-                      <Input {...field} value={field.value || ""} placeholder="https://..." />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="linkedinUrl"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>LinkedIn</FormLabel>
-                    <FormControl>
-                      <Input {...field} value={field.value || ""} placeholder="https://..." />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
-
-            <Button 
-              type="submit" 
-              className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-bold"
-              disabled={updateMutation.isPending}
-            >
-              {updateMutation.isPending ? "SAVING..." : "COMMIT CHANGES"}
-            </Button>
-          </form>
-        </Form>
-      </DialogContent>
-    </Dialog>
   );
 }

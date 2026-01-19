@@ -96,10 +96,6 @@ export function Layout({ children }: LayoutProps) {
       <footer className="relative z-30 w-full border-t border-border/40 bg-background/50 backdrop-blur-sm">
         <div className="max-w-5xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-muted-foreground">
           <p>© {new Date().getFullYear()} Retro Developer Portfolio. All rights reserved.</p>
-          <div className="flex gap-4">
-            <span>System: ONLINE</span>
-            <span>Latency: 12ms</span>
-          </div>
         </div>
       </footer>
     </div>

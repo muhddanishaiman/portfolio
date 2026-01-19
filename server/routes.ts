@@ -78,12 +78,12 @@ async function seedDatabase() {
   const profile = await storage.getProfile();
   if (!profile) {
     await storage.updateProfile({
-      name: "Alex Developer",
-      bio: "A passionate full-stack developer with a love for retro aesthetics and clean code. Welcome to my digital garden.",
-      imageUrl: "https://placehold.co/400x400/333/FFF?text=AD",
-      linkedinUrl: "https://linkedin.com",
-      githubUrl: "https://github.com",
-      twitterUrl: "https://twitter.com"
+      name: "Danish Ezwan",
+      bio: "A passionate developer with a love for retro aesthetics and clean code. Welcome to my digital garden.",
+      imageUrl: "https://placehold.co/400x400/333/FFF?text=DE",
+      linkedinUrl: "https://www.linkedin.com/in/danish-ezwan/",
+      githubUrl: "https://github.com/muhddanishaiman",
+      twitterUrl: null
     });
   }
 
