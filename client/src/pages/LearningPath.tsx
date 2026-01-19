@@ -41,17 +41,6 @@ export default function LearningPath() {
               />
             ))}
             
-            {/* End Node */}
-            <motion.div 
-              className="mt-2"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-primary/15 border-2 border-primary text-foreground px-6 py-3 font-mono text-sm rounded-full text-center">
-                <span className="font-display font-bold">Present</span>
-              </div>
-            </motion.div>
           </>
         )}
       </div>
@@ -64,7 +53,9 @@ function FlowchartNode({ node, index, isLast }: { node: any; index: number; isLa
   const nodeType = node.type?.toLowerCase() || '';
   let shapeClass = 'rounded'; // default rectangle
   
-  if (nodeType.includes('start') || nodeType.includes('end') || nodeType.includes('college') || nodeType.includes('university')) {
+  if (nodeType.includes('job')) {
+    shapeClass = 'rounded-none min-w-[200px] max-w-[280px] px-4'; // smaller square
+  } else if (nodeType.includes('start') || nodeType.includes('end') || nodeType.includes('college') || nodeType.includes('university')) {
     shapeClass = 'rounded-full px-8'; // oval
   } else if (nodeType.includes('decision') || nodeType.includes('choice')) {
     shapeClass = 'rotate-45'; // diamond (content will be counter-rotated)
