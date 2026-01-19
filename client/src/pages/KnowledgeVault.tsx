@@ -1,6 +1,6 @@
 import { useKnowledgeItems } from "@/hooks/use-knowledge";
 import { RetroCard } from "@/components/RetroCard";
-import { Database, Loader2, Search } from "lucide-react";
+import { Book, Code, Database, FileText, Globe, Loader2, Search } from "lucide-react";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { motion, AnimatePresence } from "framer-motion";
@@ -74,21 +74,39 @@ export default function KnowledgeVault() {
 }
 
 function KnowledgeCard({ item }: { item: any }) {
+  const Icon = getIconForSource(item.source);
+
   return (
-    <RetroCard className="h-full flex flex-col">
-      <h3 className="font-display text-xl font-bold mb-3 line-clamp-2">{item.title}</h3>
+    <RetroCard title={`REF-${item.id.toString().padStart(4, '0')}`} className="h-full flex flex-col">
+      <div className="flex justify-between items-start mb-4">
+        <div className="p-2 bg-primary/10 rounded text-primary">
+          <Icon className="w-6 h-6" />
+        </div>
+      </div>
+      
+      <h3 className="font-display text-xl font-bold mb-2 line-clamp-2">{item.title}</h3>
       <p className="font-serif text-sm text-muted-foreground line-clamp-3 mb-4 flex-1">
         {item.description}
       </p>
       
-      <Button 
-        variant="outline" 
-        className="w-full font-mono text-xs border-primary/30 text-primary hover:bg-primary/10 hover:border-primary"
-        data-testid={`button-access-data-${item.id}`}
-        onClick={() => item.link && window.open(item.link, '_blank')}
-      >
-        ACCESS DATA
-      </Button>
+      <div className="pt-4 border-t border-border mt-auto">
+        <Button 
+          variant="outline" 
+          className="w-full font-mono text-xs border-primary/30 text-primary hover:bg-primary/10 hover:border-primary"
+          data-testid={`button-access-data-${item.id}`}
+          onClick={() => item.link && window.open(item.link, '_blank')}
+        >
+          ACCESS DATA
+        </Button>
+      </div>
     </RetroCard>
   );
+}
+
+function getIconForSource(source: string) {
+  const s = source?.toLowerCase() || '';
+  if (s.includes("book")) return Book;
+  if (s.includes("code") || s.includes("github")) return Code;
+  if (s.includes("web") || s.includes("blog")) return Globe;
+  return FileText;
 }
