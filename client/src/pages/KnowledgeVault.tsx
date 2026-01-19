@@ -1,6 +1,6 @@
 import { useKnowledgeItems } from "@/hooks/use-knowledge";
 import { RetroCard } from "@/components/RetroCard";
-import { Book, Code, Database, FileText, Globe, Loader2, Search } from "lucide-react";
+import { Database, FileText, Loader2, Search } from "lucide-react";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { motion, AnimatePresence } from "framer-motion";
@@ -103,10 +103,6 @@ function KnowledgeCard({ item }: { item: any }) {
   );
 }
 
-function getIconForSource(source: string) {
-  const s = source?.toLowerCase() || '';
-  if (s.includes("book")) return Book;
-  if (s.includes("code") || s.includes("github")) return Code;
-  if (s.includes("web") || s.includes("blog")) return Globe;
+function getIconForSource(_source: string) {
   return FileText;
 }

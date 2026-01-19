@@ -2,6 +2,7 @@ import { useProfile } from "@/hooks/use-profile";
 import { RetroCard } from "@/components/RetroCard";
 import { Github, Linkedin, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
+import profilePhoto from "@assets/IMG_5654_1768858943179.jpeg";
 
 export default function Home() {
   const { data: profile, isLoading } = useProfile();
@@ -45,19 +46,11 @@ export default function Home() {
           <div className="w-full md:w-1/3 shrink-0">
             <div className="aspect-[4/5] w-full relative overflow-hidden bg-muted/30 border-2 border-dashed border-primary/30 p-2">
               <div className="w-full h-full bg-background border border-border relative overflow-hidden group">
-                {displayProfile.imageUrl ? (
-                  <img 
-                    src={displayProfile.imageUrl} 
-                    alt={displayProfile.name}
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                  />
-                ) : (
-                  // Placeholder Unsplash image
-                  // creative portrait silhouette
-                  <div className="w-full h-full flex items-center justify-center bg-muted">
-                     <span className="font-mono text-4xl text-muted-foreground/50">?</span>
-                  </div>
-                )}
+                <img 
+                  src={profilePhoto} 
+                  alt={displayProfile.name}
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                />
                 
                 {/* Overlay Texture */}
                 <div className="absolute inset-0 bg-primary/10 mix-blend-overlay pointer-events-none" />
