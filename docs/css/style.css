@@ -764,10 +764,19 @@ h1, h2, h3 {
 }
 
 .node-small {
-  min-width: 200px;
-  max-width: 280px;
-  padding: 0.75rem 1rem;
+  min-width: 160px;
+  max-width: 220px;
+  padding: 0.5rem 0.75rem;
   border-radius: 0;
+  font-size: 0.85rem;
+}
+
+.node-small .node-label {
+  font-size: 0.8rem;
+}
+
+.node-small .node-date {
+  font-size: 0.65rem;
 }
 
 .node-label {

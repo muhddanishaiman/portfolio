@@ -54,7 +54,7 @@ function FlowchartNode({ node, index, isLast }: { node: any; index: number; isLa
   let shapeClass = 'rounded'; // default rectangle
   
   if (nodeType.includes('job')) {
-    shapeClass = 'rounded-none min-w-[200px] max-w-[280px] px-4'; // smaller square
+    shapeClass = 'rounded-none min-w-[160px] max-w-[220px] px-3 py-2 text-sm'; // smaller square
   } else if (nodeType.includes('start') || nodeType.includes('end') || nodeType.includes('college') || nodeType.includes('university')) {
     shapeClass = 'rounded-full px-8'; // oval
   } else if (nodeType.includes('decision') || nodeType.includes('choice')) {
