@@ -20,7 +20,7 @@ export default function LearningPath() {
     <div className="space-y-8 pb-20">
       <div className="border-b-4 border-double border-primary/20 pb-6">
         <h1 className="text-3xl md:text-4xl font-bold font-display text-primary dark:text-glow">LEARNING PATH</h1>
-        <p className="font-mono text-sm text-muted-foreground mt-2">// SKILL ACQUISITION FLOWCHART</p>
+        <p className="font-serif text-muted-foreground mt-2">Here is a flowchart of my education from high school up until now</p>
       </div>
 
       {/* Flowchart Container */}

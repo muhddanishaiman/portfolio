@@ -29,7 +29,7 @@ export default function KnowledgeVault() {
       {/* Header Section */}
       <div className="border-b-4 border-double border-primary/20 pb-6">
         <h1 className="text-3xl md:text-4xl font-bold font-display text-primary dark:text-glow">KNOWLEDGE VAULT</h1>
-        <p className="font-serif text-muted-foreground mt-2">A curated archive of learning materials, resources, and insights gathered throughout my developer journey. Each entry represents a topic I've studied and the sources that helped me understand it.</p>
+        <p className="font-serif text-muted-foreground mt-2">Here are some resources that you can use to learn more about computer science</p>
       </div>
 
       {/* Search Bar */}

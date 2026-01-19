@@ -1,6 +1,6 @@
 import { useProfile } from "@/hooks/use-profile";
 import { RetroCard } from "@/components/RetroCard";
-import { Github, Linkedin, Loader2 } from "lucide-react";
+import { Github, Linkedin, Loader2, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import profilePhoto from "@assets/IMG_5654_1768858943179.jpeg";
 
@@ -91,6 +91,7 @@ export default function Home() {
                 {displayProfile.linkedinUrl && (
                   <SocialLink href={displayProfile.linkedinUrl} icon={Linkedin} label="LinkedIn" />
                 )}
+                <SocialLink href="mailto:muhdnish2572@gmail.com" icon={Mail} label="Email" />
               </div>
             </div>
           </div>
