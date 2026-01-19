@@ -82,7 +82,7 @@ export default function Home() {
 
             <div className="pt-6 border-t border-dashed border-border">
               <div className="font-mono text-xs uppercase tracking-widest text-muted-foreground mb-4">
-                Connect via Protocol
+                Connect with me
               </div>
               <div className="flex gap-4">
                 {displayProfile.githubUrl && (
