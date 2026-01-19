@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learning Path - A visual timeline of Danish Ezwan's educational and professional journey.">
+  
+  <title>Learning Path - Danish Ezwan</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="scanlines paper-texture">
+  
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        DEV_PORTFOLIO
+        <span class="logo-version">// v1.0.0</span>
+      </a>
+      
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Portfolio</a></li>
+          <li><a href="knowledge.html" class="nav-link">Knowledge Vault</a></li>
+          <li><a href="learning.html" class="nav-link active">Learning Path</a></li>
+        </ul>
+        
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" data-testid="button-theme-toggle">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Portfolio</a></li>
+      <li><a href="knowledge.html" class="mobile-nav-link">Knowledge Vault</a></li>
+      <li><a href="learning.html" class="mobile-nav-link active">Learning Path</a></li>
+    </ul>
+  </nav>
+  
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="main">
+    <div class="main-content">
+      
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="font-display text-glow">LEARNING PATH</h1>
+        <p>A visual journey through my education and career. The timeline below shows how different learning experiences overlapped and built upon each other. Branching paths indicate parallel learning activities.</p>
+      </div>
+      
+      <!-- Learning Timeline -->
+      <!-- TO MODIFY: Add, remove, or edit timeline nodes below -->
+      <!-- Use "timeline-parallel" class wrapper for items that happened simultaneously -->
+      <div class="learning-timeline">
+        
+        <!-- Group 1: Starting Point (Parallel Activities) -->
+        <div class="timeline-group animate-on-scroll">
+          <div class="timeline-group-label">Starting Point — Sep 2018</div>
+          
+          <!-- These two items happened at the same time -->
+          <div class="timeline-parallel">
+            <article class="timeline-node">
+              <span class="timeline-type">University</span>
+              <h3 class="timeline-title">Started Computer Science Degree</h3>
+              <span class="timeline-date">Sep 2018</span>
+              <p class="timeline-description">Enrolled in University to study fundamentals of CS. Learned data structures, algorithms, and software engineering principles.</p>
+            </article>
+            
+            <article class="timeline-node">
+              <span class="timeline-type">Self-Study</span>
+              <h3 class="timeline-title">Web Development Bootcamp</h3>
+              <span class="timeline-date">Sep 2018</span>
+              <p class="timeline-description">Self-taught HTML, CSS, and JS on the weekends. Built first personal projects and learned modern frameworks.</p>
+            </article>
+          </div>
+        </div>
+        
+        <!-- Group 2: First Professional Experience -->
+        <div class="timeline-group animate-on-scroll">
+          <div class="timeline-group-label">Professional Experience</div>
+          
+          <div class="timeline-items">
+            <article class="timeline-node">
+              <span class="timeline-type">Work</span>
+              <h3 class="timeline-title">First Internship</h3>
+              <span class="timeline-date">Summer 2020</span>
+              <p class="timeline-description">Junior Web Dev intern at a local startup. Gained real-world experience with team collaboration, code reviews, and agile development.</p>
+            </article>
+          </div>
+        </div>
+        
+        <!-- Group 3: Graduation -->
+        <div class="timeline-group animate-on-scroll">
+          <div class="timeline-group-label">Milestone Achievement</div>
+          
+          <div class="timeline-items">
+            <article class="timeline-node">
+              <span class="timeline-type">University</span>
+              <h3 class="timeline-title">Graduated</h3>
+              <span class="timeline-date">May 2022</span>
+              <p class="timeline-description">Bachelor of Science in Computer Science. Completed senior capstone project on distributed systems.</p>
+            </article>
+          </div>
+        </div>
+        
+        <!-- Group 4: Current (Add your current activities) -->
+        <div class="timeline-group animate-on-scroll">
+          <div class="timeline-group-label">Current Focus</div>
+          
+          <div class="timeline-parallel">
+            <article class="timeline-node">
+              <span class="timeline-type">Education</span>
+              <h3 class="timeline-title">Undergraduate at Penn State</h3>
+              <span class="timeline-date">Present</span>
+              <p class="timeline-description">Continuing education and exploring new areas of computer science while building practical projects.</p>
+            </article>
+            
+            <article class="timeline-node">
+              <span class="timeline-type">Project</span>
+              <h3 class="timeline-title">Personal Projects</h3>
+              <span class="timeline-date">Present</span>
+              <p class="timeline-description">Building portfolio projects, contributing to open source, and learning new technologies.</p>
+            </article>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+  </main>
+  
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; <span class="current-year">2026</span> Retro Developer Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

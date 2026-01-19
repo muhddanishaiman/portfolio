@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Knowledge Vault - A collection of learning materials and resources from Danish Ezwan's journey.">
+  
+  <title>Knowledge Vault - Danish Ezwan</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="scanlines paper-texture">
+  
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        DEV_PORTFOLIO
+        <span class="logo-version">// v1.0.0</span>
+      </a>
+      
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Portfolio</a></li>
+          <li><a href="knowledge.html" class="nav-link active">Knowledge Vault</a></li>
+          <li><a href="learning.html" class="nav-link">Learning Path</a></li>
+        </ul>
+        
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" data-testid="button-theme-toggle">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Portfolio</a></li>
+      <li><a href="knowledge.html" class="mobile-nav-link active">Knowledge Vault</a></li>
+      <li><a href="learning.html" class="mobile-nav-link">Learning Path</a></li>
+    </ul>
+  </nav>
+  
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="main">
+    <div class="main-content">
+      
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 class="font-display text-glow">KNOWLEDGE VAULT</h1>
+        <p>A curated archive of learning materials, resources, and insights gathered throughout my developer journey. Each entry represents a topic I've studied and the sources that helped me understand it.</p>
+      </div>
+      
+      <!-- Knowledge Grid -->
+      <!-- TO MODIFY: Add, remove, or edit knowledge items below -->
+      <div class="knowledge-grid">
+        
+        <!-- Knowledge Item 1 -->
+        <article class="knowledge-card animate-on-scroll">
+          <span class="knowledge-category">Frontend</span>
+          <h3 class="knowledge-title">React Hooks Deep Dive</h3>
+          <p class="knowledge-description">Understanding the nuances of useEffect, useMemo, and custom hooks. Learned when to use each hook and common pitfalls to avoid.</p>
+          <div class="knowledge-source">
+            Source: <a href="https://react.dev" target="_blank" rel="noopener noreferrer">Official React Docs & Various Blogs</a>
+          </div>
+        </article>
+        
+        <!-- Knowledge Item 2 -->
+        <article class="knowledge-card animate-on-scroll">
+          <span class="knowledge-category">Backend</span>
+          <h3 class="knowledge-title">PostgreSQL Indexing</h3>
+          <p class="knowledge-description">Learned about B-Tree, Hash, and GIN indexes for optimizing query performance. Understanding when to use each type of index.</p>
+          <div class="knowledge-source">
+            Source: <a href="https://postgresql.org" target="_blank" rel="noopener noreferrer">UC Berkeley Database Course (Online)</a>
+          </div>
+        </article>
+        
+        <!-- Knowledge Item 3 -->
+        <article class="knowledge-card animate-on-scroll">
+          <span class="knowledge-category">Architecture</span>
+          <h3 class="knowledge-title">System Design Patterns</h3>
+          <p class="knowledge-description">Study of microservices, load balancing, and caching strategies. Understanding trade-offs between different architectural approaches.</p>
+          <div class="knowledge-source">
+            Source: Designing Data-Intensive Applications (Book)
+          </div>
+        </article>
+        
+        <!-- Knowledge Item 4 - Add more items like this -->
+        <article class="knowledge-card animate-on-scroll">
+          <span class="knowledge-category">DevOps</span>
+          <h3 class="knowledge-title">Docker & Containerization</h3>
+          <p class="knowledge-description">Building and deploying containerized applications. Understanding Docker Compose and container orchestration basics.</p>
+          <div class="knowledge-source">
+            Source: Docker Official Documentation
+          </div>
+        </article>
+        
+        <!-- Knowledge Item 5 -->
+        <article class="knowledge-card animate-on-scroll">
+          <span class="knowledge-category">Frontend</span>
+          <h3 class="knowledge-title">CSS Grid & Flexbox</h3>
+          <p class="knowledge-description">Mastering modern CSS layout techniques. Building responsive designs without relying on frameworks.</p>
+          <div class="knowledge-source">
+            Source: CSS-Tricks & MDN Web Docs
+          </div>
+        </article>
+        
+        <!-- Knowledge Item 6 -->
+        <article class="knowledge-card animate-on-scroll">
+          <span class="knowledge-category">Tools</span>
+          <h3 class="knowledge-title">Git Version Control</h3>
+          <p class="knowledge-description">Advanced git workflows, rebasing, cherry-picking, and managing complex merge scenarios in team environments.</p>
+          <div class="knowledge-source">
+            Source: Pro Git Book (Free Online)
+          </div>
+        </article>
+        
+      </div>
+      
+    </div>
+  </main>
+  
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; <span class="current-year">2026</span> Retro Developer Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

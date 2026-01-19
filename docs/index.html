@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Danish Ezwan - Undergraduate at Penn State University. A retro-themed developer portfolio.">
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Danish Ezwan - Portfolio">
+  <meta property="og:description" content="Undergraduate at Penn State University. Welcome to my retro digital garden.">
+  <meta property="og:type" content="website">
+  
+  <title>Danish Ezwan - Portfolio</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="scanlines paper-texture">
+  
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="header-content">
+      <!-- Logo / Site Title -->
+      <a href="index.html" class="logo">
+        DEV_PORTFOLIO
+        <span class="logo-version">// v1.0.0</span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active">Portfolio</a></li>
+          <li><a href="knowledge.html" class="nav-link">Knowledge Vault</a></li>
+          <li><a href="learning.html" class="nav-link">Learning Path</a></li>
+        </ul>
+        
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" data-testid="button-theme-toggle">
+          <!-- Sun icon (shown in dark mode) -->
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <!-- Moon icon (shown in light mode) -->
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link active">Portfolio</a></li>
+      <li><a href="knowledge.html" class="mobile-nav-link">Knowledge Vault</a></li>
+      <li><a href="learning.html" class="mobile-nav-link">Learning Path</a></li>
+    </ul>
+  </nav>
+  
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="main">
+    <div class="main-content">
+      <div class="profile-section space-y-12">
+        
+        <!-- Hero Title -->
+        <div class="hero-title">
+          <h1 class="text-glow">HELLO, WORLD.</h1>
+          <p class="hero-subtitle">// Initializing portfolio sequence...</p>
+        </div>
+        
+        <!-- Profile Card -->
+        <div class="retro-card profile-card">
+          <div class="profile-layout">
+            
+            <!-- Profile Image Area -->
+            <!-- TO MODIFY: Replace the placeholder with your own image -->
+            <div class="profile-image-wrapper">
+              <div class="profile-image-frame">
+                <div class="profile-image-inner">
+                  <!-- Option 1: Use a placeholder -->
+                  <span class="profile-placeholder">?</span>
+                  
+                  <!-- Option 2: Use an actual image (uncomment and modify src) -->
+                  <!-- <img src="images/profile.jpg" alt="Danish Ezwan" class="profile-image"> -->
+                  
+                  <div class="profile-overlay"></div>
+                </div>
+                <div class="decorative-tape"></div>
+              </div>
+            </div>
+            
+            <!-- Profile Content -->
+            <!-- TO MODIFY: Update your name, title, and bio below -->
+            <div class="profile-content">
+              <div>
+                <h2 class="profile-name font-display">Danish Ezwan</h2>
+                <div class="profile-title">UNDERGRADUATE AT PENN STATE UNIVERSITY</div>
+              </div>
+              
+              <p class="profile-bio">
+                A passionate developer with a love for retro aesthetics and clean code. Welcome to my digital garden.
+              </p>
+              
+              <!-- Social Links Section -->
+              <!-- TO MODIFY: Update your social media URLs below -->
+              <div class="social-section">
+                <div class="social-label">Connect via Protocol</div>
+                <div class="social-links">
+                  <!-- GitHub Link -->
+                  <a href="https://github.com/muhddanishaiman" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub" data-testid="link-github">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                  </a>
+                  
+                  <!-- LinkedIn Link -->
+                  <a href="https://www.linkedin.com/in/danish-ezwan/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn" data-testid="link-linkedin">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                      <rect x="2" y="9" width="4" height="12"/>
+                      <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </main>
+  
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; <span class="current-year">2026</span> Retro Developer Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
