@@ -44,12 +44,12 @@ export default function Home() {
         <div className="flex flex-col md:flex-row gap-8 items-start">
           {/* Profile Image Area */}
           <div className="w-full md:w-1/3 shrink-0">
-            <div className="aspect-[4/5] w-full relative overflow-hidden bg-muted/30 border-2 border-dashed border-primary/30 p-2">
+            <div className="aspect-square w-full relative overflow-hidden bg-muted/30 border-2 border-dashed border-primary/30 p-2">
               <div className="w-full h-full bg-background border border-border relative overflow-hidden group">
                 <img 
                   src={profilePhoto} 
                   alt={displayProfile.name}
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-full object-cover"
                 />
                 
                 {/* Overlay Texture */}

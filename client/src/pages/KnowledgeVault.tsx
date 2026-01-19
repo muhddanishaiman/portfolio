@@ -1,6 +1,6 @@
 import { useKnowledgeItems } from "@/hooks/use-knowledge";
 import { RetroCard } from "@/components/RetroCard";
-import { Database, FileText, Loader2, Search } from "lucide-react";
+import { Database, Loader2, Search } from "lucide-react";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { motion, AnimatePresence } from "framer-motion";
@@ -74,16 +74,8 @@ export default function KnowledgeVault() {
 }
 
 function KnowledgeCard({ item }: { item: any }) {
-  const Icon = getIconForSource(item.source);
-
   return (
     <RetroCard title={`REF-${item.id.toString().padStart(4, '0')}`} className="h-full flex flex-col">
-      <div className="flex justify-between items-start mb-4">
-        <div className="p-2 bg-primary/10 rounded text-primary">
-          <Icon className="w-6 h-6" />
-        </div>
-      </div>
-      
       <h3 className="font-display text-xl font-bold mb-2 line-clamp-2">{item.title}</h3>
       <p className="font-serif text-sm text-muted-foreground line-clamp-3 mb-4 flex-1">
         {item.description}
@@ -103,6 +95,3 @@ function KnowledgeCard({ item }: { item: any }) {
   );
 }
 
-function getIconForSource(_source: string) {
-  return FileText;
-}
