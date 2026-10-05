@@ -33,42 +33,21 @@ const projects = [
 
 function MipsPreview() {
   return (
-    <div
-      aria-label="Illustrative miniature of the MIPS simulation interface"
-      className="relative flex aspect-[1.78] min-h-32 flex-col overflow-hidden border border-border bg-[#ede7da] p-3 text-foreground sm:min-h-0"
+    <video
+      aria-label="Silent looping preview of the MIPS instruction-set simulation"
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+      poster="/__mockup/images/projects-list-mips-poster.jpg"
+      className="block aspect-[1.78] min-h-32 w-full border border-border bg-[#ede7da] object-cover sm:min-h-0"
     >
-      <div className="flex items-center gap-1.5 border-b border-border/70 pb-2">
-        <span className="h-1.5 w-1.5 rounded-full bg-primary/65" />
-        <span className="h-1.5 w-1.5 rounded-full bg-primary/35" />
-        <span className="h-1.5 w-1.5 rounded-full bg-primary/20" />
-        <span className="ml-auto font-mono text-[8px] uppercase tracking-wider text-muted-foreground">
-          Instruction simulation
-        </span>
-      </div>
-      <div className="grid flex-1 grid-cols-[1fr_auto_1fr] items-center gap-2 py-2 font-mono text-[8px]">
-        <div className="space-y-1.5">
-          <div className="border border-border bg-background/80 px-2 py-1 text-muted-foreground">
-            instruction
-          </div>
-          <div className="border border-primary/30 bg-primary/5 px-2 py-1 text-primary">
-            ADD $t0, $s1
-          </div>
-        </div>
-        <span aria-hidden="true" className="text-sm text-primary">→</span>
-        <div className="space-y-1.5">
-          <div className="border border-border bg-background/80 px-2 py-1 text-muted-foreground">
-            registers
-          </div>
-          <div className="border border-accent/35 bg-accent/5 px-2 py-1 text-accent">
-            $t0 ← $s1 + $s2
-          </div>
-        </div>
-      </div>
-      <div className="flex justify-between border-t border-border/70 pt-1.5 font-mono text-[8px] text-muted-foreground">
-        <span>STEP 04 / 12</span>
-        <span>REGISTER UPDATE</span>
-      </div>
-    </div>
+      <source
+        src="https://d4df60ef-0043-424c-b5d9-47f473b6949c-00-2za52ni8d9ab.riker.replit.dev/media/mips-demo.mp4"
+        type="video/mp4"
+      />
+    </video>
   );
 }
 
@@ -98,7 +77,11 @@ export function ProjectsList() {
           {projects.map((project) => (
             <article
               key={project.number}
-              className="grid gap-4 border-b border-border/80 py-5 first:border-t sm:grid-cols-[56px_minmax(0,1fr)_minmax(190px,0.8fr)] sm:items-center sm:gap-5 sm:py-6"
+              className={`grid gap-4 border-b border-border/80 py-5 first:border-t sm:items-center sm:gap-5 sm:py-6 ${
+                project.preview
+                  ? 'sm:grid-cols-[56px_minmax(0,1fr)_minmax(190px,0.8fr)]'
+                  : 'sm:grid-cols-[56px_minmax(0,1fr)]'
+              }`}
             >
               <span className="font-mono text-xs tracking-[0.16em] text-primary">
                 {project.number}
@@ -138,19 +121,11 @@ export function ProjectsList() {
                 )}
               </div>
 
-              <div className="sm:pl-1">
-                {project.preview ? (
+              {project.preview && (
+                <div className="sm:pl-1">
                   <MipsPreview />
-                ) : (
-                  <div className="flex min-h-16 items-center border-l-2 border-primary/25 pl-4 sm:min-h-24">
-                    <p className="max-w-[250px] font-display text-sm italic leading-relaxed text-muted-foreground">
-                      {project.number === '02'
-                        ? 'Research and reproducible methods.'
-                        : 'A manuscript taking shape.'}
-                    </p>
-                  </div>
-                )}
-              </div>
+                </div>
+              )}
             </article>
           ))}
         </section>
