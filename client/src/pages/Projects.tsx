@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 
 const projects = [
   {
-    number: "01",
     type: "Interactive project",
     title: "Simple MIPS Simulation",
     description:
@@ -13,7 +12,6 @@ const projects = [
     preview: true,
   },
   {
-    number: "02",
     type: "Research · R package · Illustrative example",
     title: "Research R Package — Example",
     description:
@@ -23,7 +21,6 @@ const projects = [
     preview: false,
   },
   {
-    number: "03",
     type: "Writing · Book",
     title: "A book in progress",
     description:
@@ -53,38 +50,26 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="mx-auto w-full max-w-[900px] pb-20">
-      <header className="mb-5 flex flex-col gap-4 border-b-4 border-double border-primary/30 pb-5 sm:mb-7 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-primary">
-            Selected work
-          </p>
-          <h1 className="mt-2 font-display text-3xl font-bold tracking-tight dark:text-glow sm:text-4xl">
-            Projects
-          </h1>
-          <p className="mt-2 max-w-[560px] font-serif text-sm leading-relaxed text-muted-foreground">
-            A simulation, a research tool, and a book in progress—three kinds of
-            work, gathered in one list.
-          </p>
-        </div>
-        <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
-          03 projects
-        </span>
+    <div className="space-y-8 pb-20">
+      <header className="border-b-4 border-double border-primary/20 pb-6">
+        <h1 className="text-3xl md:text-4xl font-bold font-display text-primary dark:text-glow">
+          PROJECTS
+        </h1>
+        <p className="font-serif text-muted-foreground mt-2">
+          Here are some of my projects that I have done
+        </p>
       </header>
 
-      <ol aria-label="Selected projects" className="list-none p-0">
+      <ul aria-label="Selected projects" className="list-none p-0">
         {projects.map((project) => (
-          <li key={project.number}>
+          <li key={project.title}>
             <article
               className={`grid gap-4 border-b border-border/80 py-5 sm:items-center sm:gap-5 sm:py-6 ${
                 project.preview
-                  ? "border-t sm:grid-cols-[56px_minmax(0,1fr)_minmax(190px,0.8fr)]"
-                  : "sm:grid-cols-[56px_minmax(0,1fr)]"
+                  ? "border-t sm:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]"
+                  : "sm:grid-cols-1"
               }`}
             >
-              <span className="font-mono text-xs tracking-[0.16em] text-primary">
-                {project.number}
-              </span>
               <div className="min-w-0">
                 <p className="font-mono text-[9px] uppercase tracking-[0.14em] text-muted-foreground">
                   {project.type}
@@ -121,7 +106,7 @@ export default function Projects() {
                 )}
               </div>
               {project.preview && (
-                <div className="sm:pl-1">
+                <div>
                   <video
                     key={prefersReducedMotion ? "still-preview" : "looping-preview"}
                     src="/media/mips-demo.mp4"
@@ -139,7 +124,7 @@ export default function Projects() {
             </article>
           </li>
         ))}
-      </ol>
+      </ul>
     </div>
   );
 }

@@ -2,7 +2,6 @@ import './_group.css';
 
 const projects = [
   {
-    number: '01',
     type: 'Interactive project',
     title: 'Simple MIPS Simulation',
     description:
@@ -12,7 +11,6 @@ const projects = [
     preview: true,
   },
   {
-    number: '02',
     type: 'Research · R package',
     title: 'Research R Package',
     description:
@@ -21,7 +19,6 @@ const projects = [
     preview: false,
   },
   {
-    number: '03',
     type: 'Writing · Book',
     title: 'A book in progress',
     description:
@@ -54,39 +51,26 @@ function MipsPreview() {
 export function ProjectsList() {
   return (
     <main className="min-h-[100dvh] bg-background px-4 py-6 text-foreground sm:px-8 sm:py-9">
-      <div className="mx-auto w-full max-w-[900px]">
-        <header className="mb-5 flex flex-col gap-4 border-b-4 border-double border-primary/30 pb-5 sm:mb-7 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-primary">
-              Selected work <span className="px-1.5 text-border">/</span> 2023–present
-            </p>
-            <h1 className="mt-2 font-display text-3xl font-bold tracking-tight sm:text-4xl">
-              Projects
-            </h1>
-            <p className="mt-2 max-w-[560px] text-sm leading-relaxed text-muted-foreground">
-              A simulation, a research tool, and a book in progress—three kinds of
-              work, gathered in one list.
-            </p>
-          </div>
-          <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
-            03 projects
-          </span>
+      <div className="mx-auto w-full max-w-5xl space-y-8">
+        <header className="border-b-4 border-double border-primary/20 pb-6">
+          <h1 className="text-3xl md:text-4xl font-bold font-display text-primary dark:text-glow">
+            PROJECTS
+          </h1>
+          <p className="font-serif text-muted-foreground mt-2">
+            Here are some of my projects that I have done
+          </p>
         </header>
 
         <section aria-label="Selected projects">
           {projects.map((project) => (
             <article
-              key={project.number}
+              key={project.title}
               className={`grid gap-4 border-b border-border/80 py-5 first:border-t sm:items-center sm:gap-5 sm:py-6 ${
                 project.preview
-                  ? 'sm:grid-cols-[56px_minmax(0,1fr)_minmax(190px,0.8fr)]'
-                  : 'sm:grid-cols-[56px_minmax(0,1fr)]'
+                  ? 'sm:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]'
+                  : 'sm:grid-cols-1'
               }`}
             >
-              <span className="font-mono text-xs tracking-[0.16em] text-primary">
-                {project.number}
-              </span>
-
               <div className="min-w-0">
                 <p className="font-mono text-[9px] uppercase tracking-[0.14em] text-muted-foreground">
                   {project.type}
@@ -122,7 +106,7 @@ export function ProjectsList() {
               </div>
 
               {project.preview && (
-                <div className="sm:pl-1">
+                <div>
                   <MipsPreview />
                 </div>
               )}
