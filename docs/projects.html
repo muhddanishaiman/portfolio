@@ -77,6 +77,74 @@
           <p class="project-preview-caption">Looping simulation demo</p>
         </div>
       </article>
+      <article class="project-card research-example-card">
+        <header class="research-example-header">
+          <div class="research-example-heading">
+            <p class="project-index">PROJECT 02 · EXAMPLE / DEMONSTRATION ONLY</p>
+            <h2 class="project-title">Research R Package — Example</h2>
+            <p class="project-description">
+              A demonstration of how a statistical research package could be presented: a small,
+              reproducible base R example with its output shown directly, without a software interface.
+            </p>
+          </div>
+          <ul class="research-example-tags" aria-label="Example categories">
+            <li>R Package</li>
+            <li>Research</li>
+            <li>Example</li>
+          </ul>
+        </header>
+        <div class="research-example-content">
+          <section aria-labelledby="docs-research-code-title">
+            <div class="research-example-section-heading">
+              <h3 id="docs-research-code-title">Illustrative demo · base R code</h3>
+              <span>no package installation</span>
+            </div>
+            <div class="research-example-code">
+              <pre><code>measurements &lt;- c(4.2, 4.8, 5.1, 5.6, 6.3)
+
+data.frame(
+  n = length(measurements),
+  mean = mean(measurements),
+  min = min(measurements),
+  max = max(measurements)
+)</code></pre>
+            </div>
+          </section>
+          <section aria-labelledby="docs-research-results-title">
+            <h3 class="research-example-results-title" id="docs-research-results-title">
+              Illustrative demo · base R results
+            </h3>
+            <div class="research-example-table-wrap">
+              <table class="research-example-table">
+                <caption class="sr-only">Illustrative base R summary output for the example measurements</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">n</th>
+                    <th scope="col">mean</th>
+                    <th scope="col">min</th>
+                    <th scope="col">max</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>5</td>
+                    <td>5.2</td>
+                    <td>4.2</td>
+                    <td>6.3</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="research-example-note">
+              These values summarize only the five example measurements above; they are not research findings.
+            </p>
+          </section>
+        </div>
+        <footer class="research-example-footer">
+          This is a portfolio demonstration, not a published package or research claim. For a real project,
+          package-specific CRAN, GitHub, and paper links would be added here.
+        </footer>
+      </article>
     </div>
   </main>
 

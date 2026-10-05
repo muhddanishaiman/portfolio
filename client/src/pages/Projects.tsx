@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { useEffect, useState } from "react";
+import ResearchPackageExample from "@/components/ResearchPackageExample";
 
 const simulationUrl = "https://muhddanishaiman.github.io/simple-mips-simulation/";
 
@@ -79,6 +80,7 @@ export default function Projects() {
           </p>
         </div>
       </motion.article>
+      <ResearchPackageExample />
     </div>
   );
 }
