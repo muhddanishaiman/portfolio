@@ -808,11 +808,10 @@ h1, h2, h3 {
   box-shadow: inset 0 1px 4px hsl(var(--foreground) / 0.12);
 }
 
-.project-preview-frame iframe {
+.project-preview-frame video {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
-  min-height: 320px;
   border: 0;
   background: hsl(var(--background));
 }
@@ -838,10 +837,6 @@ h1, h2, h3 {
     padding: 0.75rem;
   }
 
-  .project-preview-frame iframe {
-    min-height: 320px;
-    aspect-ratio: 4 / 3;
-  }
 }
 
 /* === LEARNING PATH FLOWCHART (legacy styles) === */

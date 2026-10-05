@@ -1,9 +1,27 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const simulationUrl = "https://muhddanishaiman.github.io/simple-mips-simulation/";
 
 export default function Projects() {
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(
+    () =>
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+  );
+
+  useEffect(() => {
+    const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const updateMotionPreference = () =>
+      setPrefersReducedMotion(motionPreference.matches);
+
+    updateMotionPreference();
+    motionPreference.addEventListener("change", updateMotionPreference);
+    return () =>
+      motionPreference.removeEventListener("change", updateMotionPreference);
+  }, []);
+
   return (
     <div className="space-y-8 pb-20">
       <div className="border-b-4 border-double border-primary/20 pb-6">
@@ -43,16 +61,21 @@ export default function Projects() {
         </div>
         <div className="bg-muted/30 p-3 sm:p-5">
           <div className="overflow-hidden border-2 border-border bg-background shadow-inner">
-            <iframe
-              src={simulationUrl}
-              title="Simple MIPS Simulation live preview"
-              loading="lazy"
-              className="block aspect-video min-h-[320px] w-full bg-background sm:min-h-[440px]"
-              referrerPolicy="strict-origin-when-cross-origin"
+            <video
+              key={prefersReducedMotion ? "still-preview" : "looping-preview"}
+              src="/media/mips-demo.mp4"
+              poster="/media/mips-demo-poster.jpg"
+              preload={prefersReducedMotion ? "none" : "metadata"}
+              aria-label="Looping recorded demo of the Simple MIPS Simulation"
+              autoPlay={!prefersReducedMotion}
+              loop
+              muted
+              playsInline
+              className="block aspect-video w-full bg-background object-cover"
             />
           </div>
           <p className="mt-3 text-right font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
-            Live project preview
+            Looping simulation demo
           </p>
         </div>
       </motion.article>

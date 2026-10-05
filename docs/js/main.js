@@ -70,6 +70,23 @@ function typewriterEffect(element, text, speed = 50) {
 // === INITIALIZE ON DOM READY ===
 document.addEventListener('DOMContentLoaded', function() {
   initScrollAnimations();
+
+  const demoVideo = document.querySelector('.project-preview-frame video');
+  if (demoVideo) {
+    const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const syncDemoMotion = () => {
+      if (motionPreference.matches) {
+        demoVideo.pause();
+        demoVideo.removeAttribute('autoplay');
+      } else {
+        demoVideo.setAttribute('autoplay', '');
+        demoVideo.play().catch(() => {});
+      }
+    };
+
+    syncDemoMotion();
+    motionPreference.addEventListener('change', syncDemoMotion);
+  }
   
   // Optional: Initialize typewriter effect on hero subtitle
   const heroSubtitle = document.querySelector('.hero-subtitle');
