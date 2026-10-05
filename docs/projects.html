@@ -44,107 +44,58 @@
 
   <main class="main">
     <div class="main-content">
-      <div class="page-header">
-        <h1 class="font-display text-glow">PROJECTS</h1>
-      <p>Here are some of my projects that I have done</p>
-      </div>
-      <article class="project-card">
-        <header class="project-card-header">
+      <div class="projects-list">
+        <header class="projects-list-header">
           <div>
-            <p class="project-index">PROJECT 01</p>
-            <h2 class="project-title">Simple MIPS Simulation</h2>
-            <p class="project-description">A browser-based simulation of the MIPS instruction set.</p>
+            <p class="projects-list-eyebrow">Selected work</p>
+            <h1 class="font-display text-glow">Projects</h1>
+            <p class="projects-list-intro">A simulation, a research tool, and a book in progress—three kinds of work, gathered in one list.</p>
           </div>
-          <a class="project-open-link" href="https://muhddanishaiman.github.io/simple-mips-simulation/" target="_blank" rel="noopener noreferrer">
-            Open simulation in a new tab
-            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5h5v5m0-5-8 8" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" />
-            </svg>
-          </a>
+          <span class="projects-list-count">03 projects</span>
         </header>
-        <div class="project-preview-wrap">
-          <div class="project-preview-frame">
-            <video
-              src="media/mips-demo.mp4"
-              poster="media/mips-demo-poster.jpg"
-              aria-label="Looping recorded demo of the Simple MIPS Simulation"
-              loop
-              muted
-              playsinline>
-            </video>
-          </div>
-          <p class="project-preview-caption">Looping simulation demo</p>
-        </div>
-      </article>
-      <article class="project-card research-example-card">
-        <header class="research-example-header">
-          <div class="research-example-heading">
-            <p class="project-index">PROJECT 02 · EXAMPLE / DEMONSTRATION ONLY</p>
-            <h2 class="project-title">Research R Package — Example</h2>
-            <p class="project-description">
-              A demonstration of how a statistical research package could be presented: a small,
-              reproducible base R example with its output shown directly, without a software interface.
-            </p>
-          </div>
-          <ul class="research-example-tags" aria-label="Example categories">
-            <li>R Package</li>
-            <li>Research</li>
-            <li>Example</li>
-          </ul>
-        </header>
-        <div class="research-example-content">
-          <section aria-labelledby="docs-research-code-title">
-            <div class="research-example-section-heading">
-              <h3 id="docs-research-code-title">Illustrative demo · base R code</h3>
-              <span>no package installation</span>
-            </div>
-            <div class="research-example-code">
-              <pre><code>measurements &lt;- c(4.2, 4.8, 5.1, 5.6, 6.3)
-
-data.frame(
-  n = length(measurements),
-  mean = mean(measurements),
-  min = min(measurements),
-  max = max(measurements)
-)</code></pre>
-            </div>
-          </section>
-          <section aria-labelledby="docs-research-results-title">
-            <h3 class="research-example-results-title" id="docs-research-results-title">
-              Illustrative demo · base R results
-            </h3>
-            <div class="research-example-table-wrap">
-              <table class="research-example-table">
-                <caption class="sr-only">Illustrative base R summary output for the example measurements</caption>
-                <thead>
-                  <tr>
-                    <th scope="col">n</th>
-                    <th scope="col">mean</th>
-                    <th scope="col">min</th>
-                    <th scope="col">max</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>5</td>
-                    <td>5.2</td>
-                    <td>4.2</td>
-                    <td>6.3</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="research-example-note">
-              These values summarize only the five example measurements above; they are not research findings.
-            </p>
-          </section>
-        </div>
-        <footer class="research-example-footer">
-          This is a portfolio demonstration, not a published package or research claim. For a real project,
-          package-specific CRAN, GitHub, and paper links would be added here.
-        </footer>
-      </article>
+        <ol class="projects-list-items" aria-label="Selected projects">
+          <li>
+            <article class="projects-list-row projects-list-row-preview">
+              <span class="projects-list-number">01</span>
+              <div class="projects-list-details">
+                <p class="projects-list-type">Interactive project</p>
+                <h2>Simple MIPS Simulation</h2>
+                <p class="projects-list-description">A browser-based simulation of the MIPS instruction set. Watch the datapath in action, or open the live simulation to try it.</p>
+                <a class="projects-list-link" href="https://muhddanishaiman.github.io/simple-mips-simulation/" target="_blank" rel="noopener noreferrer">
+                  Open simulation <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+              <div class="projects-list-preview project-preview-frame">
+                <video src="media/mips-demo.mp4" poster="media/mips-demo-poster.jpg" aria-label="Silent looping preview of the Simple MIPS Simulation" preload="metadata" loop muted playsinline></video>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="projects-list-row">
+              <span class="projects-list-number">02</span>
+              <div class="projects-list-details">
+                <p class="projects-list-type">Research · R package · Illustrative example</p>
+                <h2>Research R Package — Example</h2>
+                <p class="projects-list-description">An illustrative example of a statistical research package for reproducible summaries. This is a portfolio demonstration, not a published CRAN package.</p>
+                <span class="projects-list-link projects-list-link-disabled" aria-disabled="true">Project page <span aria-hidden="true">↗</span></span>
+                <p class="projects-list-link-note">Link not supplied yet</p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="projects-list-row">
+              <span class="projects-list-number">03</span>
+              <div class="projects-list-details">
+                <p class="projects-list-type">Writing · Book</p>
+                <h2>A book in progress</h2>
+                <p class="projects-list-description">A place for the book's title and synopsis, with a direct link to the online manuscript once its page is supplied.</p>
+                <span class="projects-list-link projects-list-link-disabled" aria-disabled="true">Book page <span aria-hidden="true">↗</span></span>
+                <p class="projects-list-link-note">Link not supplied yet</p>
+              </div>
+            </article>
+          </li>
+        </ol>
+      </div>
     </div>
   </main>
 

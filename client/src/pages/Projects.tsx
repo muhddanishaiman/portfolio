@@ -1,9 +1,38 @@
-import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { useEffect, useState } from "react";
-import ResearchPackageExample from "@/components/ResearchPackageExample";
 
-const simulationUrl = "https://muhddanishaiman.github.io/simple-mips-simulation/";
+const projects = [
+  {
+    number: "01",
+    type: "Interactive project",
+    title: "Simple MIPS Simulation",
+    description:
+      "A browser-based simulation of the MIPS instruction set. Watch the datapath in action, or open the live simulation to try it.",
+    href: "https://muhddanishaiman.github.io/simple-mips-simulation/",
+    action: "Open simulation",
+    preview: true,
+  },
+  {
+    number: "02",
+    type: "Research · R package · Illustrative example",
+    title: "Research R Package — Example",
+    description:
+      "An illustrative example of a statistical research package for reproducible summaries. This is a portfolio demonstration, not a published CRAN package.",
+    href: undefined,
+    action: "Project page",
+    preview: false,
+  },
+  {
+    number: "03",
+    type: "Writing · Book",
+    title: "A book in progress",
+    description:
+      "A place for the book's title and synopsis, with a direct link to the online manuscript once its page is supplied.",
+    href: undefined,
+    action: "Book page",
+    preview: false,
+  },
+];
 
 export default function Projects() {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(
@@ -24,63 +53,93 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="space-y-8 pb-20">
-      <div className="border-b-4 border-double border-primary/20 pb-6">
-        <h1 className="text-3xl md:text-4xl font-bold font-display text-primary dark:text-glow">
-          PROJECTS
-        </h1>
-        <p className="font-serif text-muted-foreground mt-2">
-          Here are some of my projects that I have done
-        </p>
-      </div>
-
-      <motion.article
-        className="overflow-hidden border-2 border-primary/40 bg-card shadow-[5px_5px_0_hsl(var(--border))]"
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.35 }}
-      >
-        <div className="flex flex-col gap-3 border-b border-border/70 bg-primary/5 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <p className="font-mono text-xs tracking-[0.18em] text-primary">PROJECT 01</p>
-            <h2 className="mt-1 font-display text-xl font-bold text-foreground">
-              Simple MIPS Simulation
-            </h2>
-            <p className="mt-1 text-sm text-muted-foreground">
-              A browser-based simulation of the MIPS instruction set.
-            </p>
-          </div>
-          <a
-            href={simulationUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 border-2 border-primary bg-background px-4 py-2 font-mono text-xs font-semibold uppercase tracking-wide text-primary transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-          >
-            Open simulation in a new tab
-            <ExternalLink aria-hidden="true" className="h-4 w-4" />
-          </a>
-        </div>
-        <div className="bg-muted/30 p-3 sm:p-5">
-          <div className="overflow-hidden border-2 border-border bg-background shadow-inner">
-            <video
-              key={prefersReducedMotion ? "still-preview" : "looping-preview"}
-              src="/media/mips-demo.mp4"
-              poster="/media/mips-demo-poster.jpg"
-              preload={prefersReducedMotion ? "none" : "metadata"}
-              aria-label="Looping recorded demo of the Simple MIPS Simulation"
-              autoPlay={!prefersReducedMotion}
-              loop
-              muted
-              playsInline
-              className="block aspect-video w-full bg-background object-cover"
-            />
-          </div>
-          <p className="mt-3 text-right font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
-            Looping simulation demo
+    <div className="mx-auto w-full max-w-[900px] pb-20">
+      <header className="mb-5 flex flex-col gap-4 border-b-4 border-double border-primary/30 pb-5 sm:mb-7 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-primary">
+            Selected work
+          </p>
+          <h1 className="mt-2 font-display text-3xl font-bold tracking-tight dark:text-glow sm:text-4xl">
+            Projects
+          </h1>
+          <p className="mt-2 max-w-[560px] font-serif text-sm leading-relaxed text-muted-foreground">
+            A simulation, a research tool, and a book in progress—three kinds of
+            work, gathered in one list.
           </p>
         </div>
-      </motion.article>
-      <ResearchPackageExample />
+        <span className="shrink-0 font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
+          03 projects
+        </span>
+      </header>
+
+      <ol aria-label="Selected projects" className="list-none p-0">
+        {projects.map((project) => (
+          <li key={project.number}>
+            <article
+              className={`grid gap-4 border-b border-border/80 py-5 sm:items-center sm:gap-5 sm:py-6 ${
+                project.preview
+                  ? "border-t sm:grid-cols-[56px_minmax(0,1fr)_minmax(190px,0.8fr)]"
+                  : "sm:grid-cols-[56px_minmax(0,1fr)]"
+              }`}
+            >
+              <span className="font-mono text-xs tracking-[0.16em] text-primary">
+                {project.number}
+              </span>
+              <div className="min-w-0">
+                <p className="font-mono text-[9px] uppercase tracking-[0.14em] text-muted-foreground">
+                  {project.type}
+                </p>
+                <h2 className="mt-1 font-display text-xl font-bold leading-tight sm:text-[22px]">
+                  {project.title}
+                </h2>
+                <p className="mt-2 max-w-[450px] font-serif text-xs leading-[1.8] text-muted-foreground sm:text-[13px]">
+                  {project.description}
+                </p>
+                {project.href ? (
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex min-h-11 items-center gap-2 border border-primary/50 px-3 py-2 font-mono text-[9px] font-semibold uppercase tracking-[0.12em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                  >
+                    {project.action}
+                    <ExternalLink aria-hidden="true" className="h-3 w-3" />
+                  </a>
+                ) : (
+                  <div className="mt-3">
+                    <span
+                      aria-disabled="true"
+                      className="inline-flex min-h-11 cursor-not-allowed items-center gap-2 border border-border px-3 py-2 font-mono text-[9px] font-semibold uppercase tracking-[0.12em] text-muted-foreground"
+                    >
+                      {project.action}
+                      <ExternalLink aria-hidden="true" className="h-3 w-3" />
+                    </span>
+                    <p className="mt-1 font-mono text-[9px] text-muted-foreground">
+                      Link not supplied yet
+                    </p>
+                  </div>
+                )}
+              </div>
+              {project.preview && (
+                <div className="sm:pl-1">
+                  <video
+                    key={prefersReducedMotion ? "still-preview" : "looping-preview"}
+                    src="/media/mips-demo.mp4"
+                    poster="/media/mips-demo-poster.jpg"
+                    preload={prefersReducedMotion ? "none" : "metadata"}
+                    aria-label="Silent looping preview of the Simple MIPS Simulation"
+                    autoPlay={!prefersReducedMotion}
+                    loop
+                    muted
+                    playsInline
+                    className="block aspect-video w-full border border-border bg-background object-cover"
+                  />
+                </div>
+              )}
+            </article>
+          </li>
+        ))}
+      </ol>
     </div>
   );
 }
