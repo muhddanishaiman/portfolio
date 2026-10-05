@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Merriweather:ital,wght@0,400;0,700;1,400&family=VT323&display=swap');
+:root {
+  /* LIGHT MODE - RETRO PAPER */
+  --font-serif: 'Merriweather', serif;
+  --font-display: 'Lora', serif;
+  --font-mono: 'Fira Code', monospace;
+
+  /* Paper tones */
+  --background: 40 33% 92%;      /* #f3efe6 */
+  --foreground: 240 4% 16%;      /* #28282b */
+  
+  --primary: 25 76% 31%;         /* #8b3a1a (Rust) */
+  --primary-foreground: 36 100% 97%;
+  
+  --secondary: 35 20% 85%;       /* #e6e1d6 */
+  --secondary-foreground: 240 4% 16%;
+  
+  --muted: 35 20% 80%;
+  --muted-foreground: 25 10% 45%;
+  
+  --accent: 200 60% 35%;         /* #23648f (Faded Navy) */
+  --accent-foreground: 36 100% 97%;
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 25 10% 75%;
+  --input: 25 10% 75%;
+  --ring: 25 76% 31%;
+
+  --radius: 0.25rem;
+  
+  /* Paper Texture Overlay Opacity */
+  --grain-opacity: 0.4;
+  --scanline-opacity: 0;
+}
+
+.dark {
+  /* DARK MODE - RETRO TERMINAL */
+  --font-serif: 'VT323', monospace;   /* Switch to pixel/terminal font for everything */
+  --font-display: 'VT323', monospace;
+  --font-mono: 'Fira Code', monospace;
+
+  /* Phosphor tones */
+  --background: 140 30% 5%;       /* #09110b (Deep dark green tint) */
+  --foreground: 142 70% 60%;      /* #4af66f (Phosphor Green) */
+  
+  --primary: 142 70% 60%;         /* Phosphor Green */
+  --primary-foreground: 140 30% 5%;
+  
+  --secondary: 140 30% 12%;
+  --secondary-foreground: 142 60% 80%;
+  
+  --muted: 140 30% 15%;
+  --muted-foreground: 142 40% 40%;
+  
+  --accent: 45 90% 60%;           /* Amber/Orange terminal accent */
+  --accent-foreground: 140 30% 5%;
+  
+  --destructive: 0 90% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 142 40% 30%;
+  --input: 142 40% 20%;
+  --ring: 142 70% 60%;
+  
+  --grain-opacity: 0.1;
+  --scanline-opacity: 0.15;
+}
+:root { --card: var(--background); --card-foreground: var(--foreground); }
+.font-serif { font-family: var(--font-serif); }
+.font-display { font-family: var(--font-display); }
+.font-mono { font-family: var(--font-mono); }
+body { background: hsl(var(--background)); color: hsl(var(--foreground)); font-family: var(--font-serif); }
