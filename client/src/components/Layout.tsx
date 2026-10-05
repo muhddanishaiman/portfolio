@@ -27,9 +27,6 @@ export function Layout({ children }: LayoutProps) {
         <div className="text-xl md:text-2xl font-bold tracking-tight text-primary font-display dark:text-glow">
           <Link href="/" className="hover:opacity-80 transition-opacity">
             Danish Ezwan
-            <span className="hidden sm:inline text-sm ml-2 opacity-60 font-mono tracking-widest uppercase">
-              // v1.0.0
-            </span>
           </Link>
         </div>
 
@@ -95,7 +92,7 @@ export function Layout({ children }: LayoutProps) {
       {/* Footer */}
       <footer className="relative z-30 w-full border-t border-border/40 bg-background/50 backdrop-blur-sm">
         <div className="max-w-5xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-muted-foreground">
-          <p>© {new Date().getFullYear()} Retro Developer Portfolio. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Danish Ezwan. All rights reserved.</p>
         </div>
       </footer>
     </div>
