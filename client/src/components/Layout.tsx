@@ -26,7 +26,7 @@ export function Layout({ children }: LayoutProps) {
       <header className="relative z-30 w-full max-w-5xl mx-auto p-4 md:p-6 lg:p-8 flex items-center justify-between">
         <div className="text-xl md:text-2xl font-bold tracking-tight text-primary font-display dark:text-glow">
           <Link href="/" className="hover:opacity-80 transition-opacity">
-            DEV_PORTFOLIO
+            Danish Ezwan
             <span className="hidden sm:inline text-sm ml-2 opacity-60 font-mono tracking-widest uppercase">
               // v1.0.0
             </span>

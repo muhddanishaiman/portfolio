@@ -18,7 +18,7 @@ export default function Home() {
   // Fallback data if no profile exists yet
   const displayProfile = profile || {
     name: "Danish Ezwan",
-    bio: "Welcome to my retro portfolio.",
+    bio: "Just an undergraduate studying Computer Science with a minor in Mathematics, Statistics, and Cybersecurity",
     imageUrl: null,
     githubUrl: "https://github.com/muhddanishaiman",
     linkedinUrl: "https://www.linkedin.com/in/danish-ezwan/"
@@ -35,9 +35,6 @@ export default function Home() {
         >
           HELLO, WORLD.
         </motion.h1>
-        <p className="font-mono text-muted-foreground">
-          // Initializing portfolio sequence...
-        </p>
       </div>
 
       <RetroCard className="transform rotate-1 hover:rotate-0 transition-transform duration-300">

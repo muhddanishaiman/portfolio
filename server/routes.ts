@@ -79,7 +79,7 @@ async function seedDatabase() {
   if (!profile) {
     await storage.updateProfile({
       name: "Danish Ezwan",
-      bio: "A passionate developer with a love for retro aesthetics and clean code. Welcome to my digital garden.",
+      bio: "Just an undergraduate studying Computer Science with a minor in Mathematics, Statistics, and Cybersecurity",
       imageUrl: "https://placehold.co/400x400/333/FFF?text=DE",
       linkedinUrl: "https://www.linkedin.com/in/danish-ezwan/",
       githubUrl: "https://github.com/muhddanishaiman",
