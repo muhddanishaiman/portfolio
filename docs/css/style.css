@@ -718,7 +718,133 @@ h1, h2, h3 {
   border-color: hsl(var(--primary));
 }
 
-/* === LEARNING PATH FLOWCHART === */
+/* === PROJECTS === */
+.project-card {
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 2px solid hsl(var(--primary) / 0.4);
+  background: hsl(var(--card));
+  box-shadow: 5px 5px 0 hsl(var(--border));
+}
+
+.project-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem;
+  border-bottom: 1px solid hsl(var(--border) / 0.7);
+  background: hsl(var(--primary) / 0.05);
+}
+
+.project-index,
+.project-preview-caption {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: hsl(var(--primary));
+}
+
+.project-title {
+  margin-top: 0.25rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+.project-description {
+  margin-top: 0.25rem;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.875rem;
+}
+
+.project-open-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  min-height: 2.75rem;
+  padding: 0.65rem 1rem;
+  border: 2px solid hsl(var(--primary));
+  background: hsl(var(--background));
+  color: hsl(var(--primary));
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.project-open-link:hover {
+  color: hsl(var(--primary-foreground));
+  background: hsl(var(--primary));
+}
+
+.project-open-link:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 3px;
+}
+
+.project-open-link svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.project-preview-wrap {
+  padding: 1rem;
+  background: hsl(var(--muted) / 0.3);
+}
+
+.project-preview-frame {
+  overflow: hidden;
+  border: 2px solid hsl(var(--border));
+  background: hsl(var(--background));
+  box-shadow: inset 0 1px 4px hsl(var(--foreground) / 0.12);
+}
+
+.project-preview-frame iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 320px;
+  border: 0;
+  background: hsl(var(--background));
+}
+
+.project-preview-caption {
+  margin-top: 0.75rem;
+  text-align: right;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.625rem;
+}
+
+@media (max-width: 640px) {
+  .project-card-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .project-open-link {
+    width: 100%;
+  }
+
+  .project-preview-wrap {
+    padding: 0.75rem;
+  }
+
+  .project-preview-frame iframe {
+    min-height: 320px;
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* === LEARNING PATH FLOWCHART (legacy styles) === */
 .flowchart {
   display: flex;
   flex-direction: column;

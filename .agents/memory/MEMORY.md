@@ -1,0 +1,1 @@
+- [Portfolio parity](portfolio-parity.md) — keep Replit and GitHub Pages updates consistent; verify both versions.

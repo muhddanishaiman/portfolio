@@ -27,7 +27,8 @@ A retro-themed portfolio website built with pure HTML, CSS, and JavaScript. Read
 docs/
 ├── index.html       # Portfolio/Home page
 ├── knowledge.html   # Knowledge Vault page
-├── learning.html    # Learning Path page
+├── projects.html    # Projects page
+├── learning.html    # Compatibility redirect to Projects
 ├── css/
 │   └── style.css    # All styles
 ├── js/
@@ -71,27 +72,9 @@ Copy this template and modify:
 </article>
 ```
 
-### Add Learning Path Nodes (learning.html)
+### Add Projects (projects.html)
 
-For single items:
-```html
-<div class="timeline-items">
-  <article class="timeline-node">
-    <span class="timeline-type">TYPE</span>
-    <h3 class="timeline-title">Title</h3>
-    <span class="timeline-date">Date</span>
-    <p class="timeline-description">Description...</p>
-  </article>
-</div>
-```
-
-For parallel/simultaneous activities:
-```html
-<div class="timeline-parallel">
-  <article class="timeline-node">...</article>
-  <article class="timeline-node">...</article>
-</div>
-```
+Add or edit project entries in `projects.html`. Each entry can include a short description, an embedded project preview, and a link opened in a new tab with `rel="noopener noreferrer"`.
 
 ## Features
 

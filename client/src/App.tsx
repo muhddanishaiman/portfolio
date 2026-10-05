@@ -1,4 +1,4 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, Redirect } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -7,7 +7,7 @@ import NotFound from "@/pages/not-found";
 import { Layout } from "@/components/Layout";
 import Home from "@/pages/Home";
 import KnowledgeVault from "@/pages/KnowledgeVault";
-import LearningPath from "@/pages/LearningPath";
+import Projects from "@/pages/Projects";
 
 function Router() {
   return (
@@ -15,7 +15,10 @@ function Router() {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/knowledge" component={KnowledgeVault} />
-        <Route path="/learning" component={LearningPath} />
+        <Route path="/projects" component={Projects} />
+        <Route path="/learning">
+          <Redirect to="/projects" />
+        </Route>
         <Route component={NotFound} />
       </Switch>
     </Layout>

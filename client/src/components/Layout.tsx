@@ -13,7 +13,7 @@ export function Layout({ children }: LayoutProps) {
   const navItems = [
     { href: "/", label: "Portfolio" },
     { href: "/knowledge", label: "Knowledge Vault" },
-    { href: "/learning", label: "Learning Path" },
+    { href: "/projects", label: "Projects" },
   ];
 
   return (

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projects by Danish Ezwan.">
+  <title>Projects - Danish Ezwan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600&family=Merriweather:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="scanlines paper-texture">
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo">
+        DEV_PORTFOLIO
+        <span class="logo-version">// v1.0.0</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Portfolio</a></li>
+          <li><a href="knowledge.html" class="nav-link">Knowledge Vault</a></li>
+          <li><a href="projects.html" class="nav-link active" aria-current="page">Projects</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" data-testid="button-theme-toggle">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Portfolio</a></li>
+      <li><a href="knowledge.html" class="mobile-nav-link">Knowledge Vault</a></li>
+      <li><a href="projects.html" class="mobile-nav-link active" aria-current="page">Projects</a></li>
+    </ul>
+  </nav>
+
+  <main class="main">
+    <div class="main-content">
+      <div class="page-header">
+        <h1 class="font-display text-glow">PROJECTS</h1>
+      <p>Here are some of my projects that I have done</p>
+      </div>
+      <article class="project-card">
+        <header class="project-card-header">
+          <div>
+            <p class="project-index">PROJECT 01</p>
+            <h2 class="project-title">Simple MIPS Simulation</h2>
+            <p class="project-description">A browser-based simulation of the MIPS instruction set.</p>
+          </div>
+          <a class="project-open-link" href="https://muhddanishaiman.github.io/simple-mips-simulation/" target="_blank" rel="noopener noreferrer">
+            Open simulation in a new tab
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5h5v5m0-5-8 8" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" />
+            </svg>
+          </a>
+        </header>
+        <div class="project-preview-wrap">
+          <div class="project-preview-frame">
+            <iframe
+              src="https://muhddanishaiman.github.io/simple-mips-simulation/"
+              title="Simple MIPS Simulation live preview"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+          </div>
+          <p class="project-preview-caption">Live project preview</p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; <span class="current-year">2026</span> Retro Developer Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
