@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 
 const projects = [
   {
-    type: "Interactive project",
     title: "Simple MIPS Simulation",
     description:
       "A browser-based simulation of the MIPS instruction set. Watch the datapath in action, or open the live simulation to try it.",
@@ -12,7 +11,6 @@ const projects = [
     preview: true,
   },
   {
-    type: "Research · R package · Illustrative example",
     title: "Research R Package — Example",
     description:
       "An illustrative example of a statistical research package for reproducible summaries. This is a portfolio demonstration, not a published CRAN package.",
@@ -21,7 +19,6 @@ const projects = [
     preview: false,
   },
   {
-    type: "Writing · Book",
     title: "A book in progress",
     description:
       "A place for the book's title and synopsis, with a direct link to the online manuscript once its page is supplied.",
@@ -71,9 +68,6 @@ export default function Projects() {
               }`}
             >
               <div className="min-w-0">
-                <p className="font-mono text-[9px] uppercase tracking-[0.14em] text-muted-foreground">
-                  {project.type}
-                </p>
                 <h2 className="mt-1 font-display text-xl font-bold leading-tight sm:text-[22px]">
                   {project.title}
                 </h2>

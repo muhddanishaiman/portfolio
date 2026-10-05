@@ -2,7 +2,6 @@ import './_group.css';
 
 const projects = [
   {
-    type: 'Interactive project',
     title: 'Simple MIPS Simulation',
     description:
       'A browser-based simulation of the MIPS instruction set. A small glimpse of the datapath; open the live simulation to try it.',
@@ -11,7 +10,6 @@ const projects = [
     preview: true,
   },
   {
-    type: 'Research · R package',
     title: 'Research R Package',
     description:
       'A concise description of the research question, method, and what the package makes possible.',
@@ -19,7 +17,6 @@ const projects = [
     preview: false,
   },
   {
-    type: 'Writing · Book',
     title: 'A book in progress',
     description:
       'A sentence about the subject, who it is for, and why you are writing it. Read the finished manuscript as a PDF.',
@@ -72,9 +69,6 @@ export function ProjectsList() {
               }`}
             >
               <div className="min-w-0">
-                <p className="font-mono text-[9px] uppercase tracking-[0.14em] text-muted-foreground">
-                  {project.type}
-                </p>
                 <h2 className="mt-1 font-display text-xl font-bold leading-tight sm:text-[22px]">
                   {project.title}
                 </h2>
