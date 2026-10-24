@@ -1,1 +1,2 @@
 - [Portfolio parity](portfolio-parity.md) — keep Replit and GitHub Pages updates consistent; verify both versions.
+- [Book publishing](book-publishing.md) — the book is an editable LaTeX manuscript with a public compiled PDF, not an external book landing page.

@@ -11,19 +11,19 @@ const projects = [
     preview: true,
   },
   {
-    title: "Research R Package — Example",
+    title: "ambs: Bayesian Alpha-Mixture Survival Models",
     description:
-      "An illustrative example of a statistical research package for reproducible summaries. This is a portfolio demonstration, not a published CRAN package.",
-    href: undefined,
-    action: "Project page",
+      "An R package for Bayesian alpha-mixture survival models with right-censored data. It provides adaptive MCMC sampling, convergence diagnostics, model comparison, and posterior estimates of survival and hazard functions.",
+    href: "https://cran.r-project.org/web/packages/ambs/index.html",
+    action: "View on CRAN",
     preview: false,
   },
   {
-    title: "A book in progress",
+    title: "Math at Penn State",
     description:
-      "A place for the book's title and synopsis, with a direct link to the online manuscript once its page is supplied.",
-    href: undefined,
-    action: "Book page",
+      "A growing collection of mathematical notes, explanations, and worked examples from my studies at Penn State. This work-in-progress book is written in LaTeX and available as a compiled PDF.",
+    href: "/books/math-at-penn-state.pdf",
+    action: "Read the PDF",
     preview: false,
   },
 ];
@@ -53,7 +53,7 @@ export default function Projects() {
           PROJECTS
         </h1>
         <p className="font-serif text-muted-foreground mt-2">
-          Here are some of my projects that I have done
+          Here are some of the projects that I have done
         </p>
       </header>
 

@@ -1,0 +1,35 @@
+\documentclass[11pt,oneside]{book}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+
+\hypersetup{
+  pdftitle={Math at Penn State},
+  pdfauthor={Danish Ezwan},
+  pdfsubject={Mathematical notes -- work in progress}
+}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\title{Math at Penn State\\[0.5em]\large Notes and worked examples\\Work in progress}
+\author{Danish Ezwan}
+\date{\today}
+
+\begin{document}
+\frontmatter
+\maketitle
+\chapter*{About these notes}
+\addcontentsline{toc}{chapter}{About these notes}
+This manuscript is a work in progress: a place to collect mathematical
+definitions, explanations, and worked examples while studying at Penn State.
+The initial material is a short starting point, not a finished textbook.
+These are personal study notes, not an official Penn State publication.
+
+\tableofcontents
+\mainmatter
+\input{chapters/01-foundations}
+
+% Add chapters here, for example:
+% \input{chapters/02-calculus}
+\end{document}

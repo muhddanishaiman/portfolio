@@ -5,6 +5,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=development tsx server/index.ts",
+    "book:build": "node script/build-book.mjs",
+    "book:watch": "node script/build-book.mjs --watch",
+    "prebuild": "npm run book:build",
     "build": "tsx script/build.ts",
     "start": "NODE_ENV=production node dist/index.cjs",
     "check": "tsc",

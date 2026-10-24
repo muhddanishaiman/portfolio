@@ -10,17 +10,19 @@ const projects = [
     preview: true,
   },
   {
-    title: 'Research R Package',
+    title: 'ambs: Bayesian Alpha-Mixture Survival Models',
     description:
-      'A concise description of the research question, method, and what the package makes possible.',
-    action: 'Project page',
+      'An R package for Bayesian alpha-mixture survival models with right-censored data. It provides adaptive MCMC sampling, convergence diagnostics, model comparison, and posterior estimates of survival and hazard functions.',
+    href: 'https://cran.r-project.org/web/packages/ambs/index.html',
+    action: 'View on CRAN',
     preview: false,
   },
   {
-    title: 'A book in progress',
+    title: 'Math at Penn State',
     description:
-      'A sentence about the subject, who it is for, and why you are writing it. Read the finished manuscript as a PDF.',
-    action: 'Book page',
+      'A growing collection of mathematical notes, explanations, and worked examples from my studies at Penn State. This work-in-progress book is written in LaTeX and available as a compiled PDF.',
+    href: '/__mockup/books/math-at-penn-state.pdf',
+    action: 'Read the PDF',
     preview: false,
   },
 ];
@@ -54,7 +56,7 @@ export function ProjectsList() {
             PROJECTS
           </h1>
           <p className="font-serif text-muted-foreground mt-2">
-            Here are some of my projects that I have done
+            Here are some of the projects that I have done
           </p>
         </header>
 
@@ -108,10 +110,6 @@ export function ProjectsList() {
           ))}
         </section>
 
-        <footer className="pt-4 font-mono text-[9px] uppercase tracking-[0.1em] text-muted-foreground">
-          Project page links for the book and R package can be connected when their
-          destinations are ready.
-        </footer>
       </div>
     </main>
   );

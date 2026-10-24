@@ -1,0 +1,16 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "YFY4BLR0zgksuJBco2u1j"
+uri = "file://docs/books/math-at-penn-state.pdf"
+type = "pdf"
+title = "Math at Penn State — starter manuscript"
+description = "Compiled LaTeX PDF with a title page, preface, contents, and an editable starter chapter."
+logical_id = "2b706c5d-82d8-445f-8804-db49d60eba96"
+content_hash = "sha256:288cc27acfc69a6668178646c6f1ce8903aad1d97ee45df033f6f51ebb31f862"
+size = 37620
+mtime_ms = 1792854845521
+storage_uri = "gcs://replit-rams-assets-janeway/rams/assets/repl:d4df60ef-0043-424c-b5d9-47f473b6949c/2b706c5d-82d8-445f-8804-db49d60eba96/7fa43668-2342-420b-9512-6d8af6030a4b"
+storage_version_token = "1792854897079549"
+content_type = "application/pdf"
