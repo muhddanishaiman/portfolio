@@ -1365,10 +1365,13 @@ h1, h2, h3 {
 }
 
 .projects-list-description {
-  max-width: 450px;
   margin-top: 0.5rem;
   color: hsl(var(--muted-foreground));
   font: 12px/1.8 var(--font-serif);
+}
+
+.projects-list-row-preview .projects-list-description {
+  max-width: 450px;
 }
 
 .projects-list-link {

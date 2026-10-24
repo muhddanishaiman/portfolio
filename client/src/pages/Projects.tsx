@@ -71,7 +71,7 @@ export default function Projects() {
                 <h2 className="mt-1 font-display text-xl font-bold leading-tight sm:text-[22px]">
                   {project.title}
                 </h2>
-                <p className="mt-2 max-w-[450px] font-serif text-xs leading-[1.8] text-muted-foreground sm:text-[13px]">
+                <p className={`mt-2 font-serif text-xs leading-[1.8] text-muted-foreground sm:text-[13px] ${project.preview ? "max-w-[450px]" : ""}`}>
                   {project.description}
                 </p>
                 {project.href ? (

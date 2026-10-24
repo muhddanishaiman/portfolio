@@ -75,7 +75,7 @@ export default function KnowledgeVault() {
 
 function KnowledgeCard({ item }: { item: any }) {
   return (
-    <RetroCard title={`REF-${item.id.toString().padStart(4, '0')}`} className="h-full flex flex-col">
+    <RetroCard className="h-full flex flex-col">
       <h3 className="font-display text-xl font-bold mb-2 line-clamp-2">{item.title}</h3>
       <p className="font-serif text-sm text-muted-foreground line-clamp-3 mb-4 flex-1">
         {item.description}
